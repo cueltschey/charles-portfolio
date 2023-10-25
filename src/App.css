@@ -6,6 +6,7 @@
   --text2-accent: rgb(201, 51, 193);
   --body1-color: #311d6a;
   --body2-color: #e100ff;
+  --desc-color: #211d30;
   --anim-delay: 0s;
   --anim-duration: 1s;
 }
@@ -17,6 +18,7 @@
 }
 body{
   overflow:scroll;
+  background-color: var(--body1-color);
 }
 .spacer{
   aspect-ratio: 5/1;
@@ -91,9 +93,13 @@ body{
 .layer1{
   background-image: url('./assets/purple-waves.svg');
 }
-#name{
-  animation: fadeIn 3s;
+.name{
   padding-top: 150px;
+  opacity: 0;
+}
+.name.fadeIn{
+  animation: fadeIn 3s;
+  opacity: 1;
 }
 .about{
   display: flex;
@@ -104,6 +110,10 @@ body{
   width: 30%;
   display: inline-block;
   margin: 70px 10px 10px 10px;
+}
+.aboutlist h1{
+  display: block;
+  padding-top: 150px;
 }
 .aboutlist:nth-child(1) div{
   background-image: url('./assets/code.jpeg');
@@ -131,4 +141,48 @@ body{
 }
 .flip{
   transform: rotatex(180deg)
+}
+
+
+/*section 3*/
+.three{
+  color: var(--text1);
+  text-shadow: 1px 1px 1em var(--text1-accent);
+  background-color: var(--body1-color);
+  height: 250vh;
+}
+.section3{
+  display: grid;
+  grid-template-rows: 30% 30% 30%;
+  grid-auto-columns: 50% 50%;
+  height: 100%;
+  width: 100%;
+  margin-top: 100px;
+}
+.autocomplete-video{
+  width: 100%;
+  margin: 20px;
+  border-radius: 20px;
+  grid-column-start: 1;
+}
+.autodescription{
+  grid-column-start: 2;
+  background-color: var(--desc-color);
+  border-radius: 20px;
+  margin: 40px;
+  margin-top: 150px;
+  display: block;
+  width: 80%;
+}
+.desc{
+  color: white;
+  opacity: 1;
+  margin: 20px;
+  margin-top: 70px;
+}
+.desc p{
+  margin-top: 30px;
+  line-height: 40px;
+  font-size: 25px;
+  text-align: center;
 }
