@@ -1,29 +1,23 @@
-import { useState } from 'react'
+
 import './App.css'
+import About from './components/About/About'
 
 function App() {
-  const [isVisisble, setIsVisible] = useState(false);
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        setIsVisible(true)
-      }
-      else{
-        setIsVisible(false)
-      }
-    });
-  });
   
 
   return (
-    <div className='main'>
-      <h1>hello</h1>
-      <div className='boxwrap'>
-        <div className={isVisisble? 'box wipe-in': 'box'}></div>
+    <div>
+      <div className='body one'>
+        <About/>
       </div>
-      <div className='boxwrap'>
-        <div className={isVisisble? 'box wipe-in': 'box'}></div>
+      <div className="spacer layer1"/>
+      <div className='body two'>
+        <h1>Where one hobby meets another:
+          <br/>Coding 🤝 Language learning
+        </h1>
       </div>
+      <div className="spacer layer1 flip"/>
+
     </div>
   )
 }
