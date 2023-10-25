@@ -4,7 +4,6 @@ import About from './components/About/About'
 import LanguageProj from './components/Projects/LanguageProj'
 
 function App() {
-  
 
   return (
     <div>

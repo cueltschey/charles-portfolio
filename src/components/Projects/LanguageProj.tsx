@@ -1,25 +1,26 @@
 import { useState } from "react";
+import amlang from "./Amlang_Demonstartion.mp4";
 import autocompleter from "./Autocomplete_Demonstration.mp4";
 
 const LanguageProj = () => {
-    const [isVisible, setIsVisible] = useState(true)
+    const [isVisible, setIsVisible] = useState(false)
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
         if (entry.isIntersecting) {
             setIsVisible(true)
         }
-        else{
-            setIsVisible(false)
-        }
         });
     });
-    const instance = document.querySelector('.section3')
-    if(instance) observer.observe(instance);
     console.log(isVisible);
+
+    document.body.onscroll = () => {
+        const instance = document.querySelector('.section3')
+        if(instance) observer.observe(instance);
+    }
   return (
     <div className='body three'>
-        <h1 className={isVisible? "name fadeIn" : "name"}>hello world!</h1>
-        <div className={isVisible? "section3 fadeIn" : "section3"}>
+        <h1 className={isVisible? "name fadeIn" : "name"}>Language Projects</h1>
+        <div className={isVisible? "section3 swipeUp" : "section3"}>
         <video 
             className="autocomplete-video" 
             autoPlay
@@ -41,7 +42,20 @@ const LanguageProj = () => {
                 </p>
             </div>
         </div>
-        
+        <video
+            className="amlang-video" 
+            autoPlay
+            muted
+            preload="auto"
+            loop
+            >
+            <source src={amlang} type="video/mp4"/>
+        </video>
+        <div className="boxwrap amlang-description">
+            <div className="desc">
+
+            </div>
+        </div>
         </div>
       </div>
   )

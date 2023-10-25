@@ -71,6 +71,18 @@ body{
     opacity: 1;
 	}
 }
+@keyframes swipe-up{
+  0%{
+    margin-top: 90vh;
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    margin-top: 100px;
+  }
+}
 @media (prefers-reduced-motion: no-preference) {
   .wipe-in {
     animation-name: wipe-enter;
@@ -151,6 +163,13 @@ body{
   background-color: var(--body1-color);
   height: 250vh;
 }
+.three.name{
+  opacity: 1;
+}
+.three.name.fadeIn{
+  animation: fade-in 2s;
+
+}
 .section3{
   display: grid;
   grid-template-rows: 30% 30% 30%;
@@ -158,6 +177,11 @@ body{
   height: 100%;
   width: 100%;
   margin-top: 100px;
+}
+.swipeUp{
+  animation-name: swipe-up;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
 }
 .autocomplete-video{
   width: 100%;
@@ -185,4 +209,20 @@ body{
   line-height: 40px;
   font-size: 25px;
   text-align: center;
+}
+
+.amlang-video{
+  height: 100%;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  border-radius: 20px;
+  margin-top: 100px;
+}
+.amlang-description{
+  grid-column-start: 1;
+  background-color: var(--desc-color);
+  border-radius: 20px;
+  margin: 0px 40px;
+  display: block;
+  width: 80%;
 }
