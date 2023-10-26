@@ -2,6 +2,7 @@
 import './App.css'
 import About from './components/About/About'
 import LanguageProj from './components/Projects/LanguageProj'
+import OtherProj from './components/Projects/OtherProj'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       </div>
       <div className="spacer layer1 flip"/>
       <LanguageProj/>
+      <OtherProj/>
     </div>
   )
 }
