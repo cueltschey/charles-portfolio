@@ -1,0 +1,18 @@
+.navbar{
+    color: white;
+    font: bold;
+    font-size: 30px;
+}
+.navlist{
+    display: inline;
+    list-style: none;
+    position: absolute;
+    right: 20px;
+}
+.navitem{
+    display: inline-block;
+    margin: 20px;
+}
+.navitem.active{
+    text-shadow: 0px 0px 10px white;
+}

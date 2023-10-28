@@ -1,24 +1,16 @@
 
-import './App.css'
-import About from './components/About/About'
-import LanguageProj from './components/Projects/LanguageProj'
-import OtherProj from './components/Projects/OtherProj'
+import { useState } from 'react';
+import './App.css';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
-
+  const [page, setPage] = useState(0);
+  const changePage = (page: number) => {
+    setPage(page);
+  }
   return (
-    <div>
-      
-        <About/>
-      <div className="spacer layer1"/>
-      <div className='body two'>
-        <h1>Where one hobby meets another:
-          <br/>Coding 🤝 Language learning
-        </h1>
-      </div>
-      <div className="spacer layer1 flip"/>
-      <LanguageProj/>
-      <OtherProj/>
+    <div className='main'>
+      <Navbar page={page} changePage={changePage} />
     </div>
   )
 }

@@ -1,0 +1,302 @@
+/*Globals*/
+:root{
+    --text1: #d4b4ca;
+    --text1-accent: #c9b1c7;
+    --text2: #570c69;
+    --text2-accent: rgb(201, 51, 193);
+    --body1-color: #311d6a;
+    --body2-color: #e100ff;
+    --desc-color: #211d30;
+    --anim-delay: 0s;
+    --anim-duration: 1s;
+  }
+  *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+  }
+  body{
+    overflow:scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: var(--body1-color);
+  }
+  body::-webkit-scrollbar{
+    display: none;
+  }
+  .spacer{
+    aspect-ratio: 5/1;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .body{
+    height: 90vh;
+    background-size: cover;
+    background-attachment: fixed;
+    align-content: center;
+  }
+  .body h1{
+    display: block;
+    text-align: center;
+    font-size: 3em;
+    align-self: center;
+  }
+  .boxwrap{
+    width: 95%;
+    margin: 50px auto 50px auto;
+    display: block;
+    height: 500px;
+  }
+  .box{
+    color: var(--text);
+    font-family: sans-serif;
+    text-align: center;
+    background-color: #422540;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    opacity: 0;
+  }
+  
+  /* animation section */
+  @keyframes fadeIn {
+    0% { opacity: 0; padding-top: 50px;}
+    100% { opacity: 1; padding-top: 150px;}
+  }
+  @keyframes wipe-enter {
+      0% {
+          transform: scale(.5, .5);
+      opacity: 0;
+      }
+      100% {
+          transform: scale(1, 1);
+      opacity: 1;
+      }
+  }
+  @keyframes swipe-up{
+    0%{
+      margin-top: 90vh;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      margin-top: 100px;
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .wipe-in {
+      animation-name: wipe-enter;
+      animation-duration: var(--anim-duration);
+      animation-delay: var(--anim-delay);
+      animation-timing-function: ease-in-out;
+      opacity: 1;
+    }
+  }
+  
+  
+  
+  
+  /*section 1*/
+  .one{
+    color: var(--text1);
+    text-shadow: 1px 1px 1em var(--text1-accent);
+    background-color: var(--body1-color);
+  }
+  .layer1{
+    background-image: url('./assets/purple-waves.svg');
+  }
+  .name{
+    padding-top: 150px;
+    opacity: 0;
+  }
+  .name.fadeIn{
+    animation: fadeIn 3s;
+    opacity: 1;
+  }
+  .about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .boxwrap.aboutlist{
+    width: 30%;
+    display: inline-block;
+    margin: 70px 10px 10px 10px;
+  }
+  .aboutlist h1{
+    display: block;
+    padding-top: 150px;
+  }
+  .aboutlist:nth-child(1) div{
+    background-image: url('./assets/code.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .aboutlist:nth-child(2) div{
+    background-image: url('./assets/books.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .aboutlist:nth-child(3) div{
+    background-image: url('./assets/sky.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  
+  /*section 2*/
+  .two{
+    color: var(--text2);
+    text-shadow: 0px 00px 10px var(--text2-accent);
+    background-color: var(--body2-color);
+    height: 20vh;
+  }
+  .flip{
+    transform: rotatex(180deg)
+  }
+  
+  
+  /*section 3*/
+  .three{
+    color: var(--text1);
+    text-shadow: 1px 1px 1em var(--text1-accent);
+    background-color: var(--body1-color);
+    height: 200vh;
+  }
+  .three.name{
+    opacity: 1;
+  }
+  .three.name.fadeIn{
+    animation: fade-in 1s;
+  
+  }
+  .section3{
+    display: grid;
+    grid-template-rows: 30% 30% 30%;
+    grid-auto-columns: 50% 50%;
+    height: 100%;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  .swipeUp{
+    animation-name: swipe-up;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+  }
+  .autocomplete-video{
+    width: 100%;
+    margin: 20px;
+    border-radius: 20px;
+    grid-column-start: 1;
+  }
+  .autodescription{
+    grid-column-start: 2;
+    background-color: var(--desc-color);
+    border-radius: 20px;
+    margin: 40px;
+    margin-top: 150px;
+    display: block;
+    width: 80%;
+    height: min-content;
+  }
+  .desc{
+    color: white;
+    opacity: 1;
+    margin: 20px;
+    margin-top: 30px;
+  }
+  .desc p{
+    margin-top: 30px;
+    line-height: 40px;
+    font-size: 25px;
+    text-align: center;
+    height: min-content;
+  }
+  
+  .amlang-video{
+    height: 100%;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    border-radius: 20px;
+    margin-top: 150px;
+    display: block;
+  }
+  .amlang-description{
+    grid-column-start: 1;
+    background-color: var(--desc-color);
+    border-radius: 20px;
+    margin: 0px 40px;
+    display: block;
+    width: 80%;
+    height: min-content;
+  }
+  .layer2{
+    background-image: url("./assets/layer2.svg");
+  }
+  .website-video{
+    display: block;
+    width: 100vw;
+  }
+  .website-description{
+    grid-row-start: 3;
+    background-color: var(--desc-color);
+    border-radius: 20px;
+    margin-top: 200px;
+  }
+  
+  /*section 4*/
+  
+  .four{
+    background-color: var(--body1-color);
+    height: 200vh;
+    align-items: center;
+    vertical-align: middle;
+  }
+  .section4{
+    height: 150vh;
+    justify-content: center;
+    display: inline-block;
+  }
+  .cheron{
+    background-color: var(--desc-color);
+    opacity: 1;
+    color: var(--text1);
+    text-shadow: 0px 0px 10px var(--text1);
+    position: absolute;
+    right: 10vw;
+    width: 80%;
+    height: min-content;
+  }
+  .cheron button{
+    margin: 20px;
+    background-color: #311d6a;
+    border-radius: 5px;
+    width: 75px;
+    height: 25px;
+  }
+  .cont.show{
+    display: block;
+    animation: show 1s;
+  }
+  .cont{
+    display: none;
+    font-size: 20px;
+    margin: 20px;
+    line-height: 30px;
+  }
+  
+  @keyframes show {
+    0%{
+        transform: scale(1,0);
+    }
+    100%{
+      transform: scale(1,1);
+    }
+  }
