@@ -1,4 +1,4 @@
-
+import Home from "./components/Home/Home.tsx"
 import { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
@@ -11,6 +11,7 @@ function App() {
   return (
     <div className='main'>
       <Navbar page={page} changePage={changePage} />
+      <Home />
     </div>
   )
 }
