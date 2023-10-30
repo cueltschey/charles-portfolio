@@ -1,15 +1,20 @@
 import "./Home.css"
-import description from 'description.txt';
+
+
 const Home = () => {    
+  const desc : string = "I'm a junior developer who is working hard to impove my skills and master the art of programming. I'm currently enrolled at Mississippi State university as a sophomore. I'm passionateabout software development and programming"
     return(
         <div className="home">
-           <div className="description">
-                <h1>Hi there, I'm Charles</h1>
-                {description.map((word : string, index : number) => (
-                    <h5 className="fadeIn">{word}</h5>    
+           <div className="description"> 
+                <h1 className="title fadeIn">Hi there 👋, I'm Charles</h1>
+                {desc.split(" ").map((word : string, index : number) => (
+                <h6 className="fadeIn" 
+            id={String(index)} 
+            style={{animationDelay: (String(index * 0.15) + "s")}}
+            >{word}</h6>
                 ))}
            </div> 
-           <div className="picture"></div> 
+           <div className="picture fadeIn"></div> 
         </div>
     )
 }

@@ -1,29 +1,52 @@
-@keyframes{
-    fade-in{
-        0%{
-            
-        }
-    }
-}
-
+  @keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;} 
+  }
+ 
 .home{
     display: grid; 
     grid-template-columns: 50% 50%;
     grid-template-rows: 20% 80%;
-    height: 50vh;
-}
+    height: 70vh;
+  }
 .description{
     grid-column-start: 1;
     grid-row-start: 2;
     display: block;
     color: white;
     text-align: center;
+    margin-left: 100px;
+      margin-top: 100px;
+    line-height: 50px;
 }
-.description p{
+.description h6{
     line-height: 30px;
+    font-size: 25px;
+    display: inline-flex;
+    margin: 5px;
 }
 .fadeIn{
     margin: 0px;
-    animation: fade-in;
+    animation: fadeIn 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
 }
+.fadeIn::before{
+    opacity: 0;
+  }
 
+ .picture{
+    background-color: red;
+    grid-row-start: 2;
+    margin: 20px;
+    aspect-ratio:  3/2;
+    background-image: url('./chase_class.jpg');
+    background-size: cover;
+    border-radius: 20px;
+    max-height: 100%;
+
+  } 
+  .title{
+    line-height: 60px;
+    text-decoration: underline;
+  }
