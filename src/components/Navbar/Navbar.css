@@ -2,8 +2,10 @@
     color: white;
     font: bold;
     font-size: 30px;
-    display: block;
-    grid-row-start: 0;
+    position: sticky;
+    top: 0;
+    background-color: #090531;
+    z-index: 1;
 }
 .navlist{
     display: inline;

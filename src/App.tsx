@@ -2,6 +2,8 @@ import Home from "./components/Home/Home.tsx"
 import { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
+import Projects from './components/Projects/LanguageProj.tsx';
+
 
 function App() {
   const [page, setPage] = useState(0);
@@ -12,6 +14,10 @@ function App() {
     <div className='main'>
       <Navbar page={page} changePage={changePage} />
       <Home />
+      <div className="sep one"/>
+      <h1 className="maintitle">Projects</h1>
+      <div className="sep one flip"/>
+      <Projects/>
     </div>
   )
 }

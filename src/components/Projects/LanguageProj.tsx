@@ -2,6 +2,7 @@ import { useState } from "react";
 import amlang from "./Amlang_Demonstartion.mp4";
 import autocompleter from "./Autocomplete_Demonstration.mp4";
 import website from "./learn-amharic-online_Demonstration.mp4";
+import './Projects.css'
 
 const LanguageProj = () => {
     const [isVisible, setIsVisible] = useState(false)
@@ -62,28 +63,7 @@ const LanguageProj = () => {
                 </p>
             </div>
         </div>
-        <div className="boxwrap website-description">
-            <div className="desc">
-                <h1>Amlang amharic learning app</h1>
-                <p>
-                    An android application made with Kotlin, Java and XML. It uses the firebase authentication
-                    system and firestore as a back end. The application is still in development but will soon have
-                    a variety of excercises and lessons.
-                </p>
-            </div>
         </div>
-        </div>
-        <div className="spacer layer2"/>
-        <video
-        className="website-video" 
-        autoPlay
-        muted
-        preload="auto"
-        loop
-        >
-            <source src={website} type="video/mp4"/>
-        </video>
-        <div className="spacer layer2 flip"/>
       </div>
   )
 }

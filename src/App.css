@@ -12,4 +12,22 @@ body{
   overflow-x: hidden;
   scroll-behavior: smooth;
   background-color: var(--body-color);
+  z-index: 0;
+  position: relative;
+}
+.sep{
+  width: 100%;
+  height: 50vh;
+}
+.flip{
+    transform: rotatex(180deg);
+}
+.one{
+  background-image: url('./assets/sep_one.svg');
+}
+.maintitle{
+  background-color: #639292;
+  height: 10vh;
+  text-align: center;
+  font-size: 50px;
 }

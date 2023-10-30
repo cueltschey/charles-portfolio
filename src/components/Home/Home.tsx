@@ -2,7 +2,7 @@ import "./Home.css"
 
 
 const Home = () => {    
-  const desc : string = "I'm a junior developer who is working hard to impove my skills and master the art of programming. I'm currently enrolled at Mississippi State university as a sophomore. I'm passionateabout software development and programming"
+  const desc : string = "I'm a junior developer who is working hard to impove my skills and master the art of programming. I'm currently enrolled at Mississippi State university as a sophomore. I'm passionate about software development and I can't wait to apply what I've learned to the real world."
     return(
         <div className="home">
            <div className="description"> 
