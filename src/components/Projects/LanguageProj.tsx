@@ -21,7 +21,6 @@ const LanguageProj = () => {
     }
   return (
     <div className='body three'>
-        <h1 className={isVisible? "name fadeIn" : "name"}>Language Projects</h1>
         <div className={isVisible? "section3 swipeUp" : "section3"}>
         <video 
             className="autocomplete-video" 

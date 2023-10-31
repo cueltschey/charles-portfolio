@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Projects from './components/Projects/LanguageProj.tsx';
+import Skills from './components/Skills/Skills.tsx'
 
 
 function App() {
@@ -19,8 +20,9 @@ function App() {
       <div className="sep one flip"/>
       <Projects/>
       <div className="sep one"/>
-      <h1 className="maintitle">Practicing the basics:<br/></h1>
+      <h1 className="maintitle">Practicing the basics:<br/>Data structures and Algorithms</h1>
       <div className="sep one flip"/>
+      <Skills/>
 
     </div>
   )
