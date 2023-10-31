@@ -15,9 +15,13 @@ function App() {
       <Navbar page={page} changePage={changePage} />
       <Home />
       <div className="sep one"/>
-      <h1 className="maintitle">Projects</h1>
+      <h1 className="maintitle">Where one interest meets another:<br/>Programming + Languages</h1>
       <div className="sep one flip"/>
       <Projects/>
+      <div className="sep one"/>
+      <h1 className="maintitle">Practicing the basics:<br/></h1>
+      <div className="sep one flip"/>
+
     </div>
   )
 }

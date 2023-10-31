@@ -3,9 +3,10 @@
     font: bold;
     font-size: 30px;
     position: sticky;
-    top: 0;
+    top: 0px;
     background-color: #090531;
     z-index: 1;
+    margin-top: 0px;
 }
 .navlist{
     display: inline;

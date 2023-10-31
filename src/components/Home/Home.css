@@ -4,7 +4,6 @@
   }
  
 .home{
-    display: grid; 
     grid-template-columns: 100%;
     grid-template-rows: 10% 30% 60%;
     height: 200vh;
@@ -18,6 +17,7 @@
     line-height: 50px;
     margin: auto;
     width: 90%;
+    padding-top: 75px;
 }
 .description h6{
     line-height: 30px;
@@ -34,43 +34,51 @@
 .fadeIn::before{
     opacity: 0;
   }
-
- .picture{
-    background-color: red;
-    grid-row-start: 3;
-    margin: 20px;
-    aspect-ratio:  3/2;
-    background-image: url('./chase_class.jpg');
-    background-size: cover;
-    border-radius: 20px;
-    max-height: 100%;
-    margin: auto;
-    width: 90%;
-  } 
   .title{
     line-height: 60px;
     text-decoration: underline;
   }
-  .typewriter h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+  .var-highlight{
+  color: #C0AD60;
+}
+.string-highlight{
+  color: rgba(253, 149, 90, 0.8);
 }
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+#typewriter{
+    font-size: 2em;
+    margin: 0;
+    font-family: "Courier New";
+    color: white;
+    position: absolute;
+    left: 0px;
+    margin-left: 50px;
+
+    &:after{
+      content: "|";
+      animation: blink 500ms linear infinite alternate;
+    }
+}
+span{
+    display: block;
+    margin-left: 100px;
+  }
+p{
+    display: inline-flex;
+  }
+
+@-webkit-keyframes blink{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
 }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+@-moz-keyframes blink{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@keyframes blink{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
 }
 
