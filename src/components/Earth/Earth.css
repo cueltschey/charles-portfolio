@@ -10,14 +10,28 @@
 
 .earth{
   background-image: url('./earth-icon.svg');
-  background-color: #090531;
-  height: 50vh;
-  width: 50vh;
+  background-color: #090513;
   margin: auto;
+  width: 80vw;
+  height: 80vw;
   transform-origin: center;
-  border-radius: 200px;
-  margin-bottom: 50px;
+  margin-top: 100px;
+  background-clip: fill;
+  border-radius: 100%;
 }
 .spinning{
-  animation: rotate 20s linear infinite;
+  animation: rotate 60s linear infinite;
+  margin: auto;
 }
+.bent-h1{
+  display: inline-block; 
+  background: linear-gradient(to bottom, #f70202,yellow,green,blue, #6c02f7);
+  text-align: center;
+  margin: auto;
+  width: 30%;
+  transform: rotate(-40deg);
+  color: white;
+  text-shadow: 0px 0px 5px black;
+  border-radius: 20px;
+}
+

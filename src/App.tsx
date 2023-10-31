@@ -6,6 +6,10 @@ import Projects from './components/Projects/LanguageProj.tsx';
 import Skills from './components/Skills/Skills.tsx'
 import TwinklingStars from './TwinklingStars.tsx'
 import Earth from './components/Earth/Earth.tsx'
+import TypingEffect from "./TypingEffect.tsx";
+
+const title1 = 'Where one interest meets another: Programming 🤝 Languages'
+const title2 = 'Practicing the basics: Data structures and Algorithms 🌱'
 
 function App() {
   const [page, setPage] = useState(0);
@@ -16,10 +20,10 @@ function App() {
     <div className='main'>
       <TwinklingStars/>
       <Navbar page={page} changePage={changePage} />
-      <Home />
-      <h1 className="maintitle">Where one interest meets another:<br/>Programming 🤝 Languages</h1>
+      <Home/>
+      <TypingEffect text={title1} typingSpeed={50}/>
       <Projects/>
-      <h1 className="maintitle">Practicing the basics:<br/>Data structures and Algorithms 🌱</h1>
+      <TypingEffect text={title2} typingSpeed={50}/>
       <Skills/>
       <Earth/>
     </div>

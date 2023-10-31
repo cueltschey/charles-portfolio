@@ -15,13 +15,13 @@
 #typewriter{
     font-size: 2em;
     margin: 0;
-    font-family: "Courier New";
     color: white;
     padding-top: 100px;
     text-indent: 2em;
     width: 90%;
     margin: auto;
     line-height: 50px;
+    text-align: center;
 
     &:after{
       content: "|";

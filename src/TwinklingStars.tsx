@@ -5,20 +5,20 @@ const TwinklingStars = () => {
   const [starStyles, setStarStyles] = useState([{}]);
 
   useEffect(() => {
-      const numberOfStars = 100; // You can adjust the number of stars as needed
+      const numberOfStars = 1000; // You can adjust the number of stars as needed
       let stars: [{}] = [{}]
       for (let i = 0; i < numberOfStars; i++) {
         const randomX = Math.random() * 100;
         const randomY = Math.random() * 700;
-        const duration = Math.random() * 10;
-        let newStar : {} = { "top": `${randomY}vh`, "left": `${randomX}vw`, "duration": `${duration}s` }
+        const duration = Math.random() * 20;
+        let newStar : {} = { "top": `${randomY}vh`, "left": `${randomX}vw`, "color": `rgb(${randomX * 2},${(randomY / 7) * 2},${duration * 10})` }
         stars.push(newStar);
       };
       setStarStyles(stars)
   }, []);
 
   return (
-    <div className="wrapper">
+    <div>
       {starStyles.map((style, index) => (
         <div
           key={index}
@@ -26,7 +26,7 @@ const TwinklingStars = () => {
           style={{
             top: style["top"],
             left: style["left"],
-            animationDuration: style["duration"]
+            background: style["color"]
           }}
         />
       ))}

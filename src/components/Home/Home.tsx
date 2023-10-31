@@ -1,6 +1,6 @@
-import "./Home.css"
-import TypingEffect from './TypingEffect.tsx'
-import Moon from './Moon.tsx'
+import TypingEffect from '../../TypingEffect.tsx';
+import "./Home.css";
+import Moon from './Moon.tsx';
 
 async function sleepOneSecond() {
   return new Promise(resolve => {

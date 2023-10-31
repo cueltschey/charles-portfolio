@@ -21,7 +21,7 @@ const LanguageProj = () => {
     }
   return (
     <div className='body three'>
-        <div className={isVisible? "section3 swipeUp" : "section3"}>
+        <div className="section3">
         <video 
             className="autocomplete-video" 
             autoPlay
