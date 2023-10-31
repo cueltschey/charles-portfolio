@@ -14,7 +14,9 @@ const Home = () => {
             >{word}</h6>
                 ))}
            </div> 
-           <div className="picture fadeIn"></div> 
+        <div className="typewriter">
+          <h1> text </h1>
+      </div> 
         </div>
     )
 }
