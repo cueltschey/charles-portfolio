@@ -17,6 +17,9 @@ const Navbar = ({changePage, page}:Props) => {
     if(index === 1){
       window.scroll({top: 1000, left: 0, behavior: "smooth"})
     }
+    if(index === 2){
+      window.scroll({top: 3750, left: 0, behavior: "smooth"})
+    }
   }
   return (
     <div className='navbar'>

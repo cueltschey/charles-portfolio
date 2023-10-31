@@ -1,0 +1,32 @@
+.wrapper{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.data{
+  background-color: #343434;
+  border-radius: 20px;
+  margin: auto;
+  width: 90%;
+  height: 50vh;
+  border: 1px solid white;
+  margin-top: 50px;
+}
+.data h1{
+  text-align: center;
+  margin: 20px;
+  color: turquoise;
+}
+.heap{
+  grid-column-start: 1;
+}
+.avl{
+  grid-column-start: 2;
+}
+.graph{
+  grid-row-start: 2;
+}
+.linked{
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+

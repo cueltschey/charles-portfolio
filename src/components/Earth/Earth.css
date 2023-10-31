@@ -1,0 +1,23 @@
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.earth{
+  background-image: url('./earth-icon.svg');
+  background-color: #090531;
+  height: 50vh;
+  width: 50vh;
+  margin: auto;
+  transform-origin: center;
+  border-radius: 200px;
+  margin-bottom: 50px;
+}
+.spinning{
+  animation: rotate 20s linear infinite;
+}
