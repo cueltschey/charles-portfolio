@@ -1,7 +1,6 @@
 import { useState } from "react";
 import amlang from "./Amlang_Demonstartion.mp4";
 import autocompleter from "./Autocomplete_Demonstration.mp4";
-import website from "./learn-amharic-online_Demonstration.mp4";
 import './Projects.css'
 
 const LanguageProj = () => {
