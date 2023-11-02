@@ -31,5 +31,5 @@
     height: 2px;
     opacity: 0;
     background: #02eb92;
-    animation: twinkling 10s infinite;
+    animation: twinkling 5s infinite ease-in-out;
 }

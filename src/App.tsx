@@ -1,15 +1,15 @@
-import Home from "./components/Home/Home.tsx"
 import { useState } from 'react';
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import Projects from './components/Projects/LanguageProj.tsx';
-import Skills from './components/Skills/Skills.tsx'
-import TwinklingStars from './TwinklingStars.tsx'
-import Earth from './components/Earth/Earth.tsx'
+import TwinklingStars from './TwinklingStars.tsx';
 import TypingEffect from "./TypingEffect.tsx";
+import Earth from './components/Earth/Earth.tsx';
+import Home from "./components/Home/Home.tsx";
+import Navbar from './components/Navbar/Navbar';
+import Projects from './components/Projects/Projects.tsx';
+import Skills from './components/Skills/Skills.tsx';
 
-const title1 = 'Where one interest meets another: Programming 🤝 Languages'
-const title2 = 'Practicing the basics: Data structures and Algorithms 🌱'
+const title1 = 'Some of the Projects I\'ve been working on 🔧'
+const title2 = 'The skillset I\'ve been building🌱'
 
 function App() {
   const [page, setPage] = useState(0);
@@ -17,6 +17,7 @@ function App() {
     setPage(page);
   }
   return (
+    <>
     <div className='main'>
       <TwinklingStars/>
       <Navbar page={page} changePage={changePage} />
@@ -25,8 +26,8 @@ function App() {
       <Projects/>
       <TypingEffect text={title2} typingSpeed={50}/>
       <Skills/>
-      <Earth/>
-    </div>
+      
+    </div><Earth/></>
   )
 }
 

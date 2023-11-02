@@ -16,7 +16,7 @@
     color: var(--text1);
     text-shadow: 1px 1px 1em var(--text1-accent);
     background-color: var(--body1-color);
-    height: 150vh;
+    height: 200vh;
   }
   .three.name{
     opacity: 1;
@@ -68,10 +68,11 @@
   }
   
   .amlang-video{
-    height: 100%;
-    grid-column-start: 2;
+    grid-column-start: 1;
     grid-row-start: 3;
     border-radius: 20px;
+    margin: auto;
+    width: 50%;
   }
   .amlang-description{
     grid-column-start: 1;
@@ -82,18 +83,3 @@
     width: 80%;
     height: min-content;
   }
-  .layer2{
-    background-image: url("./assets/layer2.svg");
-  }
-  .website-video{
-    display: block;
-    width: 100vw;
-  }
-  .website-description{
-    grid-row-start: 3;
-    background-color: var(--desc-color);
-    border-radius: 20px;
-    margin-top: 200px;
-  }
-  
-

@@ -1,33 +1,37 @@
 .wrapper{
   display: grid;
   grid-template-columns: 50% 50%;
-  margin-bottom: 300px;
+  grid-template-rows: 10% 50%;
+  max-height: 100vh;
+  row-gap: 30px;
 }
 .data{
-  background-color: #343434;
   border-radius: 20px;
   margin: auto;
   width: 90%;
-  height: 50vh;
+  height: 100%;
   border: 1px solid white;
-  margin-top: 50px;
 }
-.data h1{
+.wrapper h1{
   text-align: center;
   margin: 20px;
-  color: turquoise;
+  color: white;
+  grid-row-start: 1;
 }
-.heap{
+.lang{
   grid-column-start: 1;
 }
-.avl{
+.alg{
   grid-column-start: 2;
-}
-.graph{
   grid-row-start: 2;
 }
-.linked{
-  grid-row-start: 2;
-  grid-column-start: 2;
+.data ul{
+  margin: auto;
+  width: 70%;
+  font-size: 40px;
+  color: white;
+  list-style-type: none;
 }
-
+.data li{
+  margin: 20px;
+}

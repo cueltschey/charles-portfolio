@@ -4,8 +4,7 @@
     font-size: 30px;
     position: sticky;
     top: 0px;
-    background-color: #090531;
-    z-index: 1;
+    z-index: 5;
     margin-top: 0px;
 }
 .navlist{
@@ -17,6 +16,8 @@
 .navitem{
     display: inline-block;
     margin: 20px;
+    background-color: #090513;
+    border-radius: 10px;
 }
 .navitem.active{
     text-shadow: 0px 0px 10px white;

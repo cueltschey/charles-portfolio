@@ -1,16 +1,21 @@
 import TypingEffect from '../../TypingEffect.tsx';
 import "./Home.css";
-import Moon from './Moon.tsx';
+import Title from './Title.tsx';
 
-const Home = () => {    
-  const desc : string = "I'm a junior developer who is working hard to impove my skills and master the art of programming. I'm currently enrolled at Mississippi State university as a sophomore. I'm passionate about software development and I can't wait to apply what I've learned to the real world."    
+
+const Home = () => {   
     return(
-    <>
         <div className="home">
-            <TypingEffect text={"Hi, My name is charles"} typingSpeed={50}/>
-            <TypingEffect text={desc} typingSpeed={50}/>
+            <Title text={"Hi, I'm Charles, an aspiring"} typingSpeed={300} finalWords={["developer", "polyglot","nature expert"]}/>
+            <div style={{textAlign: "center"}}>
+                My mother told me to make sure I loved my career... So I started a career in software.
+            </div>
+            <div>
+                Since then I've grown to love computers and the power they have to change the world. Ever since I made my first project,
+                I've been glued to the computer, trying new things. Now I have a wide variety of skills under my belt. From WPF aplications to 
+                Chrome extensions to mobile apps, I've put my skills to use solving problems and increasing productivity.
+            </div>
            </div>
-            <Moon/></>
     )
 }
 

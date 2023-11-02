@@ -11,17 +11,16 @@
 .earth{
   background-image: url('./earth-icon.svg');
   background-color: #090513;
-  margin: auto;
-  width: 80vw;
-  height: 80vw;
+  width: 100vw;
+  height: 100vw;
   transform-origin: center;
-  margin-top: 100px;
   background-clip: fill;
   border-radius: 100%;
 }
 .spinning{
   animation: rotate 60s linear infinite;
-  margin: auto;
+  position: absolute;
+  bottom: -2100px;
 }
 .bent-h1{
   display: inline-block; 
