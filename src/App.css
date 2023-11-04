@@ -29,3 +29,18 @@ body{
   display: grid;
   row-gap: 50px;
 }
+a{
+  color: turquoise;
+  padding: .5em;
+  text-decoration: none;
+  transition: letter-spacing 200ms ease;
+}
+a:hover{
+  letter-spacing: .1em;
+}
+li{
+    transition: font-size 0.2s;
+}
+li:hover{
+    font-size: 45px !important;
+}

@@ -1,0 +1,19 @@
+
+.contacts{
+  color: white;
+  margin: auto;
+  width: 90%;
+}
+.contacts ul{
+  list-style: none;
+  display: inline-flex;
+  font-size: 30px;
+  align-items: center;
+}
+.contacts li{
+  line-height: 50px;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 5px;
+}

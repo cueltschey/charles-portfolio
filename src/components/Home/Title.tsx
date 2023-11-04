@@ -12,21 +12,32 @@ const Title = ({ text, typingSpeed, finalWords }: Props) => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [finalWordsindex, setFinalWordsindex] = useState(0);
+  const [isReversed, setIsReversed] = useState(false);
 
   useEffect(() => { 
     const typeNextCharacter = () => {
       if (currentIndex < text.length) {
         setDisplayText(text.slice(0, currentIndex + 1));
-        setCurrentIndex(currentIndex + 1);
+        if(isReversed){
+          setIsReversed(false)
+          if(finalWordsindex == finalWords.length - 1){
+            setFinalWordsindex(0)         
+          }
+          else{
+            setFinalWordsindex(finalWordsindex + 1)
+          }
+        }
+        else{
+          setCurrentIndex(currentIndex + 1);
+        }
       }
       else if(currentIndex < text.length + finalWords[finalWordsindex].length) {
-        setDisplayText(displayText + finalWords[currentIndex - text.length])
-        setCurrentIndex(currentIndex + 1);
+        setDisplayText(text + finalWords[finalWordsindex].slice(0,currentIndex - text.length))
+        setCurrentIndex(isReversed? currentIndex - 1 : currentIndex + 1);
       }
       else{
-        setDisplayText(text);
-        setFinalWordsindex(finalWordsindex + 1)
-        setCurrentIndex(text.length);
+        setIsReversed(true)
+        setCurrentIndex(currentIndex - 1)
       }
     };
     

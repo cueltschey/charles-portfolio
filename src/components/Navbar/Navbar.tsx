@@ -18,7 +18,10 @@ const Navbar = ({changePage, page}:Props) => {
       window.scroll({top: 1000, left: 0, behavior: "smooth"})
     }
     if(index === 2){
-      window.scroll({top: 3750, left: 0, behavior: "smooth"})
+      window.scroll({top: 3200, left: 0, behavior: "smooth"})
+    }
+    if(index === 3){
+      window.scroll({top: 4500, left: 0, behavior: "smooth"})
     }
   }
   return (

@@ -30,6 +30,25 @@
     width: 2px;
     height: 2px;
     opacity: 0;
-    background: #02eb92;
-    animation: twinkling 5s infinite ease-in-out;
 }
+.twinkling-stars.first::before{
+  background-color: #fcf795;
+  animation: twinkling 2s infinite ease-in-out;
+}
+.twinkling-stars.second::before{
+  background-color: #8bfcf1;
+  animation: twinkling 7s infinite ease-in-out;
+}
+.twinkling-stars.third::before{
+  background-color: #ac34f7;
+  animation: twinkling 5s infinite ease-in-out;
+}
+.twinkling-stars.fourth::before{
+  background-color: #ac34f7;
+  animation: twinkling 3s infinite ease-in-out;
+}
+.twinkling-stars.fifth::before{
+  background-color: #8a3048;
+  animation: twinkling 6s infinite ease-in-out;
+}
+

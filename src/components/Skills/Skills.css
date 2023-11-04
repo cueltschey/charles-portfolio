@@ -4,6 +4,7 @@
   grid-template-rows: 10% 50%;
   max-height: 100vh;
   row-gap: 30px;
+  margin-bottom: 100px;
 }
 .data{
   border-radius: 20px;
