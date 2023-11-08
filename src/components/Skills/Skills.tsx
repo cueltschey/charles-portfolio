@@ -26,10 +26,11 @@ const Skills = () => {
         </div>
         <h1 style={{gridColumnStart: "2"}}>Data structures and algorithms</h1>
         <div className='data alg'>
-          <h1>Data Structures I've implemented:</h1>
+          <h1>Concepts I've implemented:</h1>
           <ul>
             <li><a href="https://github.com/cueltschey/AVL-tree-implemetnation">AVL tree</a></li>
             <li><a href="https://github.com/cueltschey/Heap-implementation">Heap</a></li>
+            <li><a href="https://github.com/cueltschey/dijkstra-implementation">Dijkstra's Algorithm</a></li>
           </ul>
         </div>
         <div className='data'>
