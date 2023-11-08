@@ -13,13 +13,16 @@
         opacity: 0;
         transform: translateY(0) rotate(45deg);
     }
+    10%{
+      opacity: 0.5;
+    }
     50% {
-        opacity: 1;
-        transform: translateY(-10px) rotate(45deg);
+        opacity: 0.2;
+        transform: translateY(-10px) rotate(50deg);
     }
     100% {
         opacity: 0;
-        transform: translateY(0) rotate(45deg);
+        transform: translateY(0) rotate(90deg);
     }
 }
 
@@ -27,28 +30,25 @@
 .twinkling-stars::before{
     content: "";
     position: absolute;
-    width: 2px;
-    height: 2px;
+    width: 10px;
+    height: 10px;
     opacity: 0;
+    background-color: transparent;
 }
 .twinkling-stars.first::before{
-  background-color: #fcf795;
-  animation: twinkling 2s infinite ease-in-out;
-}
-.twinkling-stars.second::before{
-  background-color: #8bfcf1;
-  animation: twinkling 7s infinite ease-in-out;
+  animation: twinkling 10s infinite ease-in-out;
+  background-color: #367;
 }
 .twinkling-stars.third::before{
-  background-color: #ac34f7;
   animation: twinkling 5s infinite ease-in-out;
+  background-color: #445;
 }
 .twinkling-stars.fourth::before{
-  background-color: #ac34f7;
   animation: twinkling 3s infinite ease-in-out;
+  background-color: #237;
 }
 .twinkling-stars.fifth::before{
-  background-color: #8a3048;
   animation: twinkling 6s infinite ease-in-out;
+  background-color: #323;
 }
 

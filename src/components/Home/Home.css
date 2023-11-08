@@ -1,36 +1,29 @@
  
 .home{
-    height: 90vh;
-    grid-column-start: 1;
-  }
-  .home div{
-    color: white;
-    margin: auto;
-    width: 90%;
-    font-size: 30px;
-    text-indent: 70px;
-    line-height: 50px;
-    margin-top: 100px;
-  }
-
-  .var-highlight{
-  color: #C0AD60;
+  height: 90vh;
+  grid-column-start: 1;
+  display: grid;
+  grid-template-columns: 30% auto ;
 }
-.string-highlight{
-  color: rgba(253, 149, 90, 0.8);
+.home div{
+  margin: auto;
+  max-height: 100%;
+  width: 90%;
+  font-size: 30px;
+  text-indent: 70px;
+  line-height: 50px;
+  margin-top: 100px;
+  grid-column-start: 2;
+  font-size: 2em;
+  margin: 0;
+  text-indent: 2em;
+  width: 90%;
+  margin: auto;
+  line-height: 50px;
+  text-align: center;
 }
-
 #typewriter{
-    font-size: 2em;
-    margin: 0;
-    color: white;
-    padding-top: 100px;
-    text-indent: 2em;
-    width: 90%;
-    margin: auto;
-    line-height: 50px;
-    text-align: center;
-
+  font-size: 40px;
     &:after{
       content: "|";
       animation: blink 500ms linear infinite alternate;

@@ -23,7 +23,7 @@ const TwinklingStars = ({num_stars, y_vh}: Props) => {
   }, []);
 
   return (
-    <div>
+    <div className='noanimation'>
       {starStyles.map((style, index) => (
         <div
           key={index}
