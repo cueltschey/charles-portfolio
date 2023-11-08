@@ -1,15 +1,20 @@
 import { useEffect, useState } from 'react';
 import './stars.css';
 
-const TwinklingStars = () => {
+interface Props{
+  num_stars: number;
+  y_vh: number;
+}
+
+const TwinklingStars = ({num_stars, y_vh}: Props) => {
   const [starStyles, setStarStyles] = useState([[""]])
 
   useEffect(() => {
-      const numberOfStars = 1000; // You can adjust the number of stars as needed
+      const numberOfStars = num_stars; // You can adjust the number of stars as needed
       const stars: [string[]] = [[]]
       for (let i = 0; i < numberOfStars; i++) {
         const randomX = Math.random() * 100;
-        const randomY = Math.random() * 600;
+        const randomY = Math.random() * y_vh;
         const type = Math.floor(Math.random() * 3);
         const newStar : string[] = [`${randomY}vh`,`${randomX}vw`,`${Number(type)}`]; 
         stars.push(newStar);

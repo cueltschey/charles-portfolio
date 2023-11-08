@@ -19,6 +19,7 @@ body{
   background-color: var(--body-color);
   z-index: 0;
   position: relative;
+  cursor: none;
 }
 .maintitle{
   text-align: center;
@@ -43,4 +44,12 @@ li{
 }
 li:hover{
     font-size: 45px !important;
+}
+.custom-cursor{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #248;
+  border-radius: 50%;
+  z-index: 1000;
 }

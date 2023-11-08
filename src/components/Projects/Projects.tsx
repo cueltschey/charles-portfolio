@@ -2,6 +2,7 @@ import { useState } from "react";
 import amlang from "./Amlang_Demonstartion.mp4";
 import autocompleter from "./Autocomplete_Demonstration.mp4";
 import './Projects.css'
+import TwinklingStars from "../../TwinklingStars";
 
 const LanguageProj = () => {
     const [isVisible, setIsVisible] = useState(false)
@@ -20,6 +21,7 @@ const LanguageProj = () => {
     }
   return (
     <div className='body three'>
+      <TwinklingStars num_stars={200} y_vh={100}/>
         <div className="section3">
         <video 
             className="autocomplete-video" 

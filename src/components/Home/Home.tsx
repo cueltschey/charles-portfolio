@@ -1,10 +1,12 @@
 import "./Home.css";
 import Title from './Title.tsx';
+import TwinklingStars from "../../TwinklingStars.tsx";
 
 
 const Home = () => {   
     return(
         <div className="home">
+            <TwinklingStars num_stars={200} y_vh={100}/>
             <Title text={"Hi, I'm Charles, an aspiring"} typingSpeed={150} finalWords={[" developer ", " polyglot "," digital architect ", " creator ", " leader "]}/>
             <div style={{textAlign: "center"}}>
                 My mother told me to make sure I loved my career... So I started a career in software.

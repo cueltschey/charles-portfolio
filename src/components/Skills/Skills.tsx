@@ -1,8 +1,10 @@
 import './Skills.css'
+import TwinklingStars from '../../TwinklingStars'
 
 const Skills = () => {
   return (
     <div>
+      <TwinklingStars num_stars={200} y_vh={100}/>
       <div className="wrapper">
         <h1>Programming langauges</h1>
         <div className='data lang'>
