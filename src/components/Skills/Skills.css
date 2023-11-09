@@ -1,7 +1,7 @@
 .wrapper{
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 10% 50%;
+  grid-template-rows: 10% 90%;
   max-height: 100vh;
   row-gap: 30px;
   margin-bottom: 100px;
@@ -20,6 +20,9 @@
 }
 .lang{
   grid-column-start: 1;
+}
+.lang ul{
+  display: inline-flex;
 }
 .alg{
   grid-column-start: 2;
