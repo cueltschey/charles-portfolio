@@ -15,7 +15,7 @@ const Skills = () => {
             <li id="csharp"></li>
             <li id="python"></li>
           </ul>
-          <h1>Fiddling with:</h1>
+          <h1>Learning:</h1>
           <ul>
             <li id="c"></li>
             <li id="kotlin"></li>
@@ -31,6 +31,10 @@ const Skills = () => {
             <li><a href="https://github.com/cueltschey/AVL-tree-implemetnation">AVL tree</a></li>
             <li><a href="https://github.com/cueltschey/Heap-implementation">Heap</a></li>
             <li><a href="https://github.com/cueltschey/dijkstra-implementation">Dijktra's Algorithm</a></li>
+          </ul>
+          <ul>
+            <li><a href="https://github.com/cueltschey/challenge4">BST</a></li>
+            <li><a href="https://github.com/cueltschey/challenge4">Linked List</a></li>
           </ul>
         </div>
       </div>

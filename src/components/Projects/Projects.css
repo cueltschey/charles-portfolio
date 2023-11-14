@@ -1,73 +1,21 @@
-@keyframes swipe-up{
-    0%{
-      margin-top: 90vh;
-      opacity: 0;
-    }
-    50%{
-      opacity: 1;
-    }
-    100%{
-      margin-top: 100px;
-    }
-  }
-
-
-.three{
-    color: var(--text1);
-    text-shadow: 1px 1px 1em var(--text1-accent);
-    background-color: var(--body1-color);
-    height: 200vh;
-  }
   .section3{
-    display: grid;
-    grid-template-rows: 30% 30% 30%;
-    grid-auto-columns: 50% 50%;
-    height: 100%;
-    width: 100%;
-  }
- .autocomplete-video{
-    width: 100%;
-    margin: 20px;
-    border-radius: 20px;
-    grid-column-start: 1;
-  }
-  .autodescription{
-    grid-column-start: 2;
-    background-color: var(--desc-color);
-    border-radius: 20px;
-    margin: 40px;
-    margin-top: 150px;
-    display: block;
-    width: 80%;
+    display: inline-flex;
     height: min-content;
+    width: 100%;
+  }
+  .section3 video{
+    width: 50%;
+    border-radius: 20px;
+    order: 2;
+    margin: 10px;
   }
   .desc{
-    color: white;
-    opacity: 1;
-    margin: 20px;
-    margin-top: 30px;
+    width: 95%;
+    margin: 10px;
+    order: 1;
   }
   .desc p{
-    margin-top: 30px;
     line-height: 40px;
     font-size: 25px;
-    text-align: center;
-    height: min-content;
-  }
-  
-  .amlang-video{
-    grid-column-start: 1;
-    grid-row-start: 3;
-    border-radius: 20px;
-    margin: auto;
-    width: 50%;
-  }
-  .amlang-description{
-    grid-column-start: 1;
-    background-color: var(--desc-color);
-    border-radius: 20px;
-    margin: 0px 40px;
-    display: block;
-    width: 80%;
-    height: min-content;
+    text-indent: 3vw;
   }

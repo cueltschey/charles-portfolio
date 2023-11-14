@@ -34,6 +34,7 @@
   font-size: 40px;
   color: white;
   list-style-type: none;
+  display: inline-flex;
 }
 .data li{
   width: 70px;
@@ -44,7 +45,7 @@
   border-radius: 10px;
 }
 .alg li{
-  margin: 0;
+  margin: 50px;
 }
 #javascript{
   background-image: url('./javascript.png');
@@ -56,7 +57,7 @@
   background-image: url('./python.jpg');
 }
 #csharp{
-  background-image: url('./C#.png');
+  background-image: url('./csharp.png');
 }
 #c{
   background-image: url('./C.png');
