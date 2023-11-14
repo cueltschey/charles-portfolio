@@ -1,7 +1,7 @@
 .wrapper{
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 10% 50%;
+  grid-template-rows: 10% 90%;
   max-height: 100vh;
   row-gap: 30px;
   margin-bottom: 100px;
@@ -12,6 +12,7 @@
   width: 90%;
   height: 100%;
   border: 1px solid black;
+  background-color: #908090;
 }
 .wrapper h1{
   text-align: center;
@@ -20,6 +21,9 @@
 }
 .lang{
   grid-column-start: 1;
+}
+.lang ul{
+  display: inline-flex;
 }
 .alg{
   grid-column-start: 2;
