@@ -1,6 +1,7 @@
 import './Contacts.css'
 import resume from './Charles Ueltschey Resume.docx.pdf'
 import TwinklingStars from '../../TwinklingStars'
+import Email from './Email.tsx'
 
 const Contacts = () => {
   return (
@@ -12,6 +13,7 @@ const Contacts = () => {
         <li>phone: 971-222-7416</li>
         <li>resume: <a href={resume} download>download</a></li>
       </ul> 
+      <Email/>
     </div>
   )
 }
