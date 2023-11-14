@@ -2,10 +2,9 @@
 .contacts{
   color: white;
   margin: auto;
-  width: 90%;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  row-gap: 50px;
+  width: 100%;
+  display: flex;
+  gap: 50px;
 }
 .contacts ul{
   list-style: none;
@@ -13,14 +12,20 @@
   align-items: center;
   grid-row-start: 2;
   grid-column-start: 2;
+  width: 50%;
 }
 .contacts li{
   line-height: 50px;
-  border: 1px solid white;
   border-radius: 20px;
   padding: 10px;
-  margin: 5px;
+  margin: auto;
 }
-.email{
-  grid-column-start: 1;
+.contacts li:hover, a:hover{
+  letter-spacing: 1px;
+}
+.contacts p{
+  margin: auto;
+  font-size: 30px;
+  width: 50%;
+  text-align: center;
 }

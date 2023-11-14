@@ -3,14 +3,16 @@ import './Skills.css'
 
 const Skills = () => {
   return (
-    <div>
+    <>
       <TwinklingStars num_stars={200} y_vh={100}/>
       <div className="wrapper">
+        <div>
         <h1>Programming langauges</h1>
-        <div className='data lang'>
+          <div className='data'>
           <h1>Proficient™️:</h1>
           <ul>
             <li id="javascript"></li>
+            <li id="typescript"></li>
             <li id="cpp"></li>
             <li id="csharp"></li>
             <li id="python"></li>
@@ -20,11 +22,13 @@ const Skills = () => {
             <li id="c"></li>
             <li id="kotlin"></li>
             <li id="java"></li>
-            <li id="assembly"></li>
+            <li id="nasm"></li>
           </ul>
-
+          </div>
         </div>
-        <h1 style={{gridColumnStart: "2"}}>Data structures and algorithms</h1>
+
+        <div>
+        <h1>Data structures and algorithms</h1>
         <div className='data alg'>
           <h1>My implementations:</h1>
           <ul>
@@ -38,7 +42,8 @@ const Skills = () => {
           </ul>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   )
 }
 

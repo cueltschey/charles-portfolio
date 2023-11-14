@@ -16,12 +16,12 @@
   box-sizing: border-box;
   font-family: "Courier New";
   z-index: 2;
-  text-shadow: 0px 0px 10px salmon;
+  text-shadow: 0px 0px 10px #102333;
   color: white;
   transition: text-shadow 0.4s;
 }
 *:hover{
-  text-shadow: 0px 0px 10px turquoise;
+  text-shadow: 0px 0px 10px white;
 }
 *:not(.noanimation){
   animation: fade-in 1s;
@@ -30,8 +30,7 @@ h1{
   text-align: center;
 }
 body{
-  overflow: scroll;
-  overflow-x: hidden;
+  user-select: none;
   scroll-behavior: smooth;
   background-image: url('./assets/background.svg');
   z-index: 0;
