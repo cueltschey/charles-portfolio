@@ -30,25 +30,25 @@
 .twinkling-stars::before{
     content: "";
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 2px;
+    height: 2px;
     opacity: 0;
     background-color: transparent;
 }
 .twinkling-stars.first::before{
   animation: twinkling 10s infinite ease-in-out;
-  background-color: #367;
+  background-color: #fa5fea;
 }
 .twinkling-stars.third::before{
   animation: twinkling 5s infinite ease-in-out;
-  background-color: #445;
+  background-color: #1c1cfc;
 }
 .twinkling-stars.fourth::before{
   animation: twinkling 3s infinite ease-in-out;
-  background-color: #237;
+  background-color: #fa1924;
 }
 .twinkling-stars.fifth::before{
   animation: twinkling 6s infinite ease-in-out;
-  background-color: #323;
+  background-color: #0efa0a;
 }
 

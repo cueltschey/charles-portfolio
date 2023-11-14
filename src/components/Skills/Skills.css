@@ -11,8 +11,7 @@
   margin: auto;
   width: 90%;
   height: 100%;
-  border: 1px solid black;
-  background-color: #908090;
+  border: 1px solid white;
 }
 .wrapper h1{
   text-align: center;
@@ -37,5 +36,32 @@
   list-style-type: none;
 }
 .data li{
-  margin: 20px;
+  width: 70px;
+  margin: auto;
+  min-width: 70px;
+  height: 70px;
+  background-size: cover;
+  border-radius: 10px;
 }
+.alg li{
+  margin: 0;
+}
+#javascript{
+  background-image: url('./javascript.png');
+}
+#cpp{
+  background-image: url('./c++.png');
+}
+#python{
+  background-image: url('./python.jpg');
+}
+#csharp{
+  background-image: url('./C#.png');
+}
+#c{
+  background-image: url('./C.png');
+}
+#kotlin{
+  background-image: url('./kotlin.jpg');
+}
+

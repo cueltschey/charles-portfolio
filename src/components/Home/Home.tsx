@@ -9,7 +9,6 @@ const Home = () => {
         <div className="home">
             <TwinklingStars num_stars={200} y_vh={100}/>
             <div className="slider"/>
-            <div className="image"/>
             <Title text={"Hi 👋, I'm Charles, an aspiring "} typingSpeed={150} finalWords={words}/>
             <div>
                 My mother told me to make sure I loved my career... So I started a career in software.<br></br>
