@@ -1,4 +1,3 @@
-import { useState } from "react";
 import autocompleter from "./Autocomplete_Demonstration.mp4";
 import './Projects.css'
 import TwinklingStars from "../../TwinklingStars";

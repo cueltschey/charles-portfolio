@@ -2,30 +2,36 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  width: 100vw;
+  gap: 20px;
 }
 .data{
   border-radius: 20px;
   width: auto;
   height: auto;
   border: 1px solid white;
+  transition: padding 0.5s;
+}
+.data:hover{
+  padding: 10px;
 }
 .wrapper h1{
   text-align: center;
   margin: 20px;
+  font-size: 25px;
 }
 .data ul{
   margin: 20px;
   width: 70%;
-  font-size: 40px;
+  font-size: 20px;
   color: white;
   list-style-type: none;
   display: inline-flex;
-  gap: 40px;
+  gap: 20px;
 }
 .data li{
-  min-width: 75px;
-  min-height: 75px;
+  min-width: 60px;
+  min-height: 60px;
   background-size: cover;
   border-radius: 10px;
   background-position: center;
@@ -56,4 +62,9 @@
 }
 #nasm{
   background-image: url('./nasm.png');
+}
+.data.alg ul{
+  display: block;
+  margin: 0px 20px;
+  font-size: 25px;
 }

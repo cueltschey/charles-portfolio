@@ -10,6 +10,7 @@ const Email = () => {
     if(form.current) emailjs.sendForm('service_tv0lq4r', 'template_kmvbo19', form.current, '6UOrP3WJiSDj-r5Pp')
       .then((result) => {
           console.log(result.text);
+          form.current?.reset()
       }, (error) => {
           console.log(error.text);
       });

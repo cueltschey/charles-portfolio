@@ -4,8 +4,8 @@ import './Skills.css'
 const Skills = () => {
   return (
     <>
-      <TwinklingStars num_stars={200} y_vh={100}/>
       <div className="wrapper">
+      <TwinklingStars num_stars={200} y_vh={100}/>
         <div>
         <h1>Programming langauges</h1>
           <div className='data'>
@@ -27,10 +27,10 @@ const Skills = () => {
           </div>
         </div>
 
-        <div>
+        <div style={{order:"2"}}>
         <h1>Data structures and algorithms</h1>
         <div className='data alg'>
-          <h1>My implementations:</h1>
+          <h1>Personal Implementations:</h1>
           <ul>
             <li><a href="https://github.com/cueltschey/AVL-tree-implemetnation">AVL tree</a></li>
             <li><a href="https://github.com/cueltschey/Heap-implementation">Heap</a></li>
@@ -39,10 +39,37 @@ const Skills = () => {
           <ul>
             <li><a href="https://github.com/cueltschey/challenge4">BST</a></li>
             <li><a href="https://github.com/cueltschey/challenge4">Linked List</a></li>
+              <li><a>Hash Table</a></li>
           </ul>
+          <h1>Live Leetcode problem count:</h1>
+            <ul>
+              <li>Easy Problems: 5</li>
+              <li>Medium Problems: 3</li>
+              <li>Heard Problems: 0</li>
+            </ul>
         </div>
       </div>
+      <div style={{order:"3"}}>
+          <h1>Architecture</h1>   
+          <div className='data alg'>
+            <h1>Backends I've implemented:</h1>
+            <ul>
+              <li>MondoDB</li>
+              <li>SQLite</li>
+              <li>Firebase</li>
+              <li>JSON</li>
+            </ul>
+            <h1>Frameworks/ Architectures:</h1>
+            <ul>
+              <li>React</li>
+              <li>Vue</li>
+              <li>WPF</li>
+              <li>.NET</li>
+              <li>Androidx</li>
+            </ul>
+          </div>
       </div>
+    </div>
     </>
   )
 }

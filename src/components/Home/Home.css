@@ -23,6 +23,8 @@
   margin: 20px;
   height: 100px;
   white-space: pre-line;
+  display: block;
+  margin-bottom: 50px;
 }
 p{
     display: inline-flex;

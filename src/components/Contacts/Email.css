@@ -1,6 +1,6 @@
 .email{
   display: block;
-  width: 90%;
+  width: 50%;
 }
 .email label, input, textarea{
   display: block;
