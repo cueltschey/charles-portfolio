@@ -8,6 +8,7 @@ import Contacts from './components/Contacts/Contacts.tsx';
 import AnimatedCursor from "react-animated-cursor";
 
 function App() {
+  document.title = "Charles Ueltschey Portfolio"
   const [page, setPage] = useState(0);
   const changePage = (page: number) => {
     setPage(page);
