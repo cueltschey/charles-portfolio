@@ -1,18 +1,28 @@
 .navbar{
-    font: bold;
-    font-size: 30px;
-    top: 0px;
-    z-index: 5;
-    margin-top: 0px;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0px;
 }
 .navlist{
-    display: inline;
-    list-style: none;
-    position: absolute;
-    right: 20px;
+  list-style: none;
+  display: inline-flex;
 }
 .navitem{
-    display: inline-block;
-    padding: 20px;
-  text-shadow: 0px 0px 3px white;
+  background-color: black;
+  font-size: 25px;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 20px;
+  transition: background-color 0.5s;
+}
+.navitem:hover{
+  background-color: #3da5b3;
+}
+.navitem.active{
+  background-color: #3da5b3;
+}
+.navitem.active:hover{
+  background-color: #ada5b3;
 }

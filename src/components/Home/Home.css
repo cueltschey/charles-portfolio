@@ -1,58 +1,35 @@
  
 .home{
-  height: 90vh;
+  height: 100vh;
   grid-column-start: 1;
   display: flex;
-  gap: 50px;
 }
 .home div{
   line-height: 50px;
-  margin-top: 100px;
   font-size: 20px;
   text-indent: 2em;
-  margin: auto;
   margin-top: 0px;
+  margin-left: 20px;
+  width: 100%;
 }
-#typewriter{
-  font-size: 2em;
-  text-wrap: wrap;
-    &:after{
-      content: "|";
-      animation: blink 500ms linear infinite alternate;
-    }
-  margin: 20px;
-  height: 100px;
-  white-space: pre-line;
-  display: block;
-  margin-bottom: 50px;
-}
-p{
-    display: inline-flex;
-  }
-.slider{
-  grid-column-start: 0 !important;
+.home img{
   background-image: url('../../assets/slide-in.svg');
-}
-.slider img{
   height: auto;
   width: 20vw !important;
   border-radius: 10px;
   background-size: cover; 
   margin: auto;
 }
-
-@-webkit-keyframes blink{
-  0%{opacity: 0;}
-  100%{opacity: 1;}
+.dummyclass{
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+.dummyclass li{
+  transition: background-color 1s; 
+}
+.dummyclass li:hover{
+  background-color: white;
 }
 
-@-moz-keyframes blink{
-  0%{opacity: 0;}
-  100%{opacity: 1;}
-}
-
-@keyframes blink{
-  0%{opacity: 0;}
-  100%{opacity: 1;}
-}
 

@@ -7,20 +7,14 @@ interface Props{
 }
 
 const Navbar = ({changePage, page}:Props) => {
-    const pages: string[] = ["Home","Projects","Skills","Contact"];
-  if(page === 1){
-    document.body.style.overflowY = "scroll";
-  }
-  else{
-    document.body.style.overflow = "hidden"
-  }
+    const pages: string[] = ["About","Projects"];
   
   return (
     <div className='navbar'>
         <ul className="navlist">
             {pages.map((text: string, index: number) => (
                 <li 
-                style={{color: page === index? "white" : "#EEAEAA"}}
+                style={{color: page === index? "#2f4a4d" : "#8ee5ed"}}
                 className={page === index? "navitem active" : "navitem"}
                 onClick={() => changePage(index)}>
                     {text}

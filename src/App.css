@@ -54,12 +54,6 @@ a{
 a:hover{
   letter-spacing: .1em;
 }
-li{
-    transition: letter-spacing 0.4s;
-}
-li:hover{
-    letter-spacing: .1em;
-}
 .custom-cursor{
   position: absolute;
   width: 20px;
