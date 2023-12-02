@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './components/Home/Home.css';
+import './typing.css'
 
 interface Props{
   text: string;
