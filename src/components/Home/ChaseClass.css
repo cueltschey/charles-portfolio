@@ -1,0 +1,57 @@
+.chaseclass{
+  color: red;
+}
+.dummyclass{
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+.dummyclass li{
+  font-size: 25px;
+  transition: background-color 1s; 
+  height: min-content;
+  height: 30px;
+  vertical-align: middle;
+  line-height: 30px;
+}
+.dummyclass li:hover{
+  background-color: white;
+  color: black;
+}
+
+.in1{
+  text-indent: 100px;
+}
+.in2{
+  text-indent: 150px;
+}
+.in3{
+  text-indent: 200px;
+}
+.in4{
+  text-indent: 250px;
+}
+
+
+
+.classinit{
+  color: turquoise;
+}
+.include{
+  color: purple;
+}
+.string{
+  color: green;
+}
+.classflag{
+  color: red;
+}
+.typeid{
+  color: orange;
+}
+.number
+{
+  color: lightcoral;
+}
+
+

@@ -40,10 +40,12 @@ body{
   z-index: 0;
   position: relative;
   cursor: none;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 .main{
   display: grid;
-  row-gap: 70px;
+  row-gap: 20px;
   background-color: black;
   animation-name: color-change;
   animation-delay: 0s;

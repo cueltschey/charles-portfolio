@@ -37,7 +37,7 @@ const Skills = () => {
           <ul>
             <li><a href="https://github.com/cueltschey/challenge4">BST</a></li>
             <li><a href="https://github.com/cueltschey/challenge4">Linked List</a></li>
-              <li><a>Hash Table</a></li>
+              <li><a href="https://github.com/cueltschey/hashtable-implementation">Hash Table</a></li>
           </ul>
           <h1>Live Leetcode problem count:</h1>
             <ul>
