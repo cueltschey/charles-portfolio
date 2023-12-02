@@ -1,12 +1,10 @@
 import './Contacts.css'
 import resume from './Charles Ueltschey Resume.docx.pdf'
-import TwinklingStars from '../../TwinklingStars'
 import Email from './Email.tsx'
 
 const Contacts = () => {
   return (
     <div className="contacts">
-      <TwinklingStars num_stars={200} y_vh={100}/>
       <ul>
         <li>email: chaseuelt@gmail.com</li>
         <li>github: <a href="https://github.com/cueltschey">cueltschey</a></li>

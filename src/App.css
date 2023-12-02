@@ -8,7 +8,12 @@
   transform: scale(1);
 }
 }
-
+@keyframes color-change{
+0%{background-color: black;}
+50%{background-color: #1a1716;}
+75%{background-color: #0e1417;}
+100%{background-color: black;}
+}
 
 *{
   padding: 0px;
@@ -32,18 +37,18 @@ h1{
 body{
   user-select: none;
   scroll-behavior: smooth;
-  background-image: url('./assets/background.svg');
   z-index: 0;
   position: relative;
   cursor: none;
 }
-.maintitle{
-  text-align: center;
-  font-size: 50px;
-}
 .main{
   display: grid;
   row-gap: 70px;
+  background-color: black;
+  animation-name: color-change;
+  animation-delay: 0s;
+  animation-duration: 100s;
+  animation-iteration-count: infinite;
 }
 a{
   color: turquoise;

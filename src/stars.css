@@ -34,21 +34,7 @@
     height: 2px;
     opacity: 0;
     background-color: transparent;
-}
-.twinkling-stars.first::before{
-  animation: twinkling 10s infinite ease-in-out;
-  background-color: #fa5fea;
-}
-.twinkling-stars.third::before{
-  animation: twinkling 5s infinite ease-in-out;
-  background-color: #1c1cfc;
-}
-.twinkling-stars.fourth::before{
-  animation: twinkling 3s infinite ease-in-out;
-  background-color: #fa1924;
-}
-.twinkling-stars.fifth::before{
-  animation: twinkling 6s infinite ease-in-out;
-  background-color: #0efa0a;
+    animation: twinkling 3s infinite ease-in-out;
+    background-color: white;
 }
 

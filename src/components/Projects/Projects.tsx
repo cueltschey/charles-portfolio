@@ -1,12 +1,10 @@
 import autocompleter from "./Autocomplete_Demonstration.mp4";
 import './Projects.css'
-import TwinklingStars from "../../TwinklingStars";
 
 const Projects = () => {
   return (
     <>
         <div className="proj">
-        <TwinklingStars num_stars={200} y_vh={100}/>
         <video 
             autoPlay
             muted

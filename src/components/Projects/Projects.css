@@ -25,6 +25,7 @@
     line-height: 40px;
     font-size: 25px;
     list-style: none;
+    transition: letter-spacing 200ms ease;
   }
   .desc li:hover{
     letter-spacing: 1px;

@@ -6,6 +6,7 @@ import Projects from './components/Projects/Projects.tsx';
 import Skills from './components/Skills/Skills.tsx';
 import Contacts from './components/Contacts/Contacts.tsx';
 import AnimatedCursor from "react-animated-cursor";
+import TypingEffect from './TypingEffect.tsx';
 
 function App() {
   document.title = "Charles Ueltschey Portfolio"
