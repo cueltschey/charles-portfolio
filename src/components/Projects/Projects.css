@@ -1,18 +1,20 @@
   .proj{
     display: inline-flex;
-    height: min-content;
+    height: 60vh;
     width: 100%;
+    margin-bottom: 50px;
   }
   .proj video{
     width: 50%;
+    height: min-content;
     border-radius: 20px;
     order: 2;
-    margin: 10px;
+    margin: 50px;
   }
   .desc{
-    width: 95%;
     margin: 15px;
     order: 1;
+    width: 50%;
   }
   .desc h1{
     margin: 30px;

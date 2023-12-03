@@ -35,6 +35,7 @@ h1{
   text-align: center;
 }
 body{
+  background-color: black;
   user-select: none;
   scroll-behavior: smooth;
   z-index: 0;
