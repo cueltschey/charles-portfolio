@@ -6,6 +6,8 @@ import Projects from './components/Projects/Projects.tsx';
 import Skills from './components/Skills/Skills.tsx';
 import Contacts from './components/Contacts/Contacts.tsx';
 import AnimatedCursor from "react-animated-cursor";
+import Favicon from "react-favicon";
+import fav from './assets/favicon.ico'
 
 function App() {
   document.title = "Charles Ueltschey Portfolio"
@@ -13,8 +15,10 @@ function App() {
   const changePage = (page: number) => {
     setPage(page);
   }
+  if(page == 0) window.scroll(0,0)
   return (
     <>
+      <Favicon url={fav}/>
     <AnimatedCursor
       innerSize={8}
       outerSize={8}
