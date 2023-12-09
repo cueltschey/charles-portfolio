@@ -3,10 +3,31 @@ import './Projects.css'
 import androidbooksreader from './adroid_booksreader_alpha.mp4'
 import wordchad from './word_chad_demo.mp4'
 import cheron from './cheron_demo.mp4'
+import pong from '../../assets/pong-clone_demonstration.mp4'
 
 const Projects = () => {
   return (
     <>
+      <div className="proj">
+        <video 
+            autoPlay
+            muted
+            preload="auto" 
+            loop
+            >
+            <source src={pong} type="video/mp4"/>
+            Your browser does not support the video tag.
+        </video>
+            <div className="desc">
+              <h1>Russian Autocompleter</h1>
+          <li id="lang">Main Language: C++</li>
+          <li id="lang">Framework: Windows API</li>
+          <li id="fet">A take on pong to try and make it more exciting</li>
+          <li id="fet">First player to reach 10 points wins</li>
+          <li id="err">Some bugs with the controls</li> 
+          <li>Github: <a href="https://github.com/cueltschey/pong-clone">pong-clone</a></li>
+        </div>
+      </div>
         <div className="proj">
         <video 
             autoPlay
