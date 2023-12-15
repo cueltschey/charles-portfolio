@@ -19,7 +19,7 @@ const Projects = () => {
             Your browser does not support the video tag.
         </video>
             <div className="desc">
-              <h1>Russian Autocompleter</h1>
+              <h1>Pong Clone</h1>
           <li id="lang">Main Language: C++</li>
           <li id="lang">Framework: Windows API</li>
           <li id="fet">A take on pong to try and make it more exciting</li>
