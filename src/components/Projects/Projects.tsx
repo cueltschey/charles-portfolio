@@ -4,11 +4,14 @@ import androidbooksreader from './adroid_booksreader_alpha.mp4'
 import wordchad from './word_chad_demo.mp4'
 import cheron from './cheron_demo.mp4'
 import pong from '../../assets/pong-clone_demonstration.mp4'
+import HoverableDiv from "./HoverDiv";
 
 const Projects = () => {
   return (
     <>
+      <HoverableDiv />
       <div className="proj">
+        <a href="https://github.com/cueltschey/pong-clone">
         <video 
             autoPlay
             muted
@@ -18,6 +21,7 @@ const Projects = () => {
             <source src={pong} type="video/mp4"/>
             Your browser does not support the video tag.
         </video>
+        </a>
             <div className="desc">
               <h1>Pong Clone</h1>
           <li id="lang">Main Language: C++</li>
