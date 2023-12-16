@@ -1,50 +1,37 @@
-import React, { useState } from 'react';
+import { ReactNode } from 'react';
 
 interface Props {
-  content_drop : string;
   href : string;
+  description : ReactNode;
+  video : string;
+  deployment : string;
 }
 
-const HoverableDiv = ({content_drop , href} : Props) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-
-  const handleHover = (event) => {
-    setPosition({ x: event.clientX, y: event.clientY });
-    setIsHovered(true);
-  };
-
-  const handleLeave = () => {
-    setIsHovered(false);
-  };
-
+const HoverableDiv = ({href, description, video, deployment} : Props) => {
   return (
-    <a href={href}>
-    <div style={{ position: 'relative' }}>
-      <div
-        onMouseEnter={handleHover}
-        onMouseLeave={handleLeave}
-      >
-      </div>
-
-      {isHovered && (
-        <div
+        <div className="proj">
+        <a href={href}>{description}</a>
+        <video 
+            autoPlay
+            muted
+            preload="auto" 
+            loop
+            >
+            <source src={video} type="video/mp4"/>
+            Your browser does not support the video tag.
+        </video>
+        {deployment === ""? <></> :
+        <a href={deployment}
           style={{
-            position: 'absolute',
-            top: position.y, // You can adjust the offset
-            left: position.x, // You can adjust the offset
-            background: 'rgba(34, 34, 34, 0.9)',
-            padding: '5px',
-            borderRadius: '5px',
-            boxShadow: '0 0 5px rgba(0, 0, 0, 0.2)',
-            zIndex: 1000,
-          }}
-        >
-          {content_drop}
-        </div>
-      )}
-    </div>
-    </a>
+            zIndex: 100,
+            background: "yellow",
+            borderRadius: 10,
+            margin: 10,
+          }}>
+          ⭐Deployed
+        </a>}
+
+       </div>
   );
 };
 
