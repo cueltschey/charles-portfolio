@@ -1,4 +1,5 @@
 import './Skills.css'
+import UserStatisticsComponent from './UserStatisticsComponent'
 
 const Skills = () => {
   return (
@@ -39,13 +40,8 @@ const Skills = () => {
             <li><a href="https://github.com/cueltschey/challenge4">Linked List</a></li>
               <li><a href="https://github.com/cueltschey/hashtable-implementation">Hash Table</a></li>
           </ul>
-          <h1>Live Leetcode problem count:</h1>
-            <ul>
-              <li>Easy Problems: 5</li>
-              <li>Medium Problems: 3</li>
-              <li>Heard Problems: 0</li>
-            </ul>
-        </div>
+            <UserStatisticsComponent username='chaseuelt'/>
+          </div>
       </div>
       <div style={{order:"3"}}>
           <h1>Architecture</h1>   
