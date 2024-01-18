@@ -3,12 +3,12 @@ const path = require('path');
 const cors = require('cors')
 
 const app = express();
-const port = 3001;
+const port = 8080;
 
 
 app.use(cors())
 // Serve static files from the Vite project's dist directory
-app.use(express.static(path.join(__dirname, '../my-vite-project/dist')));
+app.use(express.static(path.join(__dirname, '../dist')));
 
 app.get('/', (req, res) => {
   // Handle requests for the root route

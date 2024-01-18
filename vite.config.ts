@@ -8,14 +8,7 @@ export default defineConfig({
     watch: {
       usePolling: true
     },
-    proxy: {
-      '/graphql': {
-        target: 'https://leetcode.com',
-        changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path.replace(/^\/graphql/, ''),
-      },
-    },
-  }
+  },
+  base: "./"
 })
 
