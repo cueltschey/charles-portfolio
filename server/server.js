@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, '../dist')));
 
 app.get('/', (req, res) => {
   // Handle requests for the root route
-  res.sendFile(path.join(__dirname, '../dist/index.html'));
+  res.sendFile(path.join(__dirname, '../dist'));
 });
 
 app.listen(port, () => {
