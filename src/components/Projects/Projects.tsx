@@ -3,7 +3,7 @@ import './Projects.css'
 import androidbooksreader from './adroid_booksreader_alpha.mp4'
 import wordchad from './word_chad_demo.mp4'
 import cheron from './cheron_demo.mp4'
-import pong from '../../assets/pong-clone_demonstration.mp4'
+import pong from './pong-clone-demonstration.mp4'
 import HoverableDiv from "./HoverDiv";
 
 const Projects = () => {

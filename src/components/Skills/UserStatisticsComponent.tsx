@@ -1,73 +1,41 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useEffect, useState } from 'react';
 
-interface Props {
-  username : string
-}
-
-const UserStatisticsComponent = ({ username }:Props) => {
-  const [userData, setUserData] = useState<any>(null);
-
-  const fetchData = async () => {
-        const apiUrl = 'https://leetcode.com/graphql';
-        const graphqlQuery = `
-          query userProblemsSolved($username: String!) {
-            allQuestionsCount {
-              difficulty
-              count
-            }
-            matchedUser(username: $username}) {
-              problemsSolvedBeatsStats {
-                difficulty
-                percentage
-              }
-              submitStatsGlobal {
-                acSubmissionNum {
-                  difficulty
-                  count
-                }
-              }
-            }
-          }
-        `;
-        let response = null
-        try{
-          response = await axios.post(apiUrl, {
-            query: graphqlQuery,
-            variables: { username: username },
-          });
-          setUserData(response.data.data);
-        } 
-        catch (error : any) {
-          console.log(error)
-          if (error.response) {
-            // The request was made and the server responded with a status code
-            console.error('Response error:', error.response.data);
-            console.error('Status code:', error.response.status);
-          } else if (error.request) {
-            // The request was made but no response was received
-            console.error('Request error:', error.request);
-          } else {
-            // Something happened in setting up the request that triggered an Error
-            console.error('Error message:', error.message);
-          }
-      }
-  }
-
-
+const UserStatisticsComponent = () => {
+  const [total, setTotal] = useState(0);
+  const [easy, setEasy] = useState(0);
+  const [medium, setMedium] = useState(0);
+  const [hard, setHard] = useState(0);
+  
   useEffect(() => {
-    fetchData();
-  }, [username]);
+    const fetchData = async () => {
+      try {
+        const response = await fetch('./src/components/Skills/problem_count.json');
+        const data = await response.json();
+        setTotal(data["total"])
+        setEasy(data["easy"])
+        setMedium(data["medium"])
+        setHard(data["hard"])
+        console.log(total)
+      } catch (error) {
+        console.error('Error fetching JSON data:', error);
+      }
+    };
 
+    fetchData();
+  }, []); // Empty dependency array ensures that this effect runs once on component mount
+
+  // Render your component based on the jsonData
   return (
     <div>
-      <h2 style={{fontSize: 25, textAlign: "center"}}>User Statistics for {username}</h2>
-      {userData? 
-        <div>
-          {userData}
-          <pre>{JSON.stringify(userData, null, 2)}</pre>
-        </div>
-       : <div>No data found</div>}
+      {total != 0 ?
+        <div><h1>Live Leetcode Problem Count:</h1>
+        <ul>
+            <li>Total: {total}</li>
+            <li>Easy: {easy}</li>
+            <li>Medium: {medium}</li>
+            <li>Hard: {hard}</li>
+        </ul></div> : <p>Error loading data</p>
+      }
     </div>
   );
 };
