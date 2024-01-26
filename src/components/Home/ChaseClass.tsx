@@ -1,10 +1,10 @@
 import "./ChaseClass.css"
 
 const ChaseClass = () => {
-  const languages1 = ['"C++"','"C"','"C#"','"SQL"','"Kotlin"','"Javascript"','"html"','"css"','"Python"']
-  const languages2 = ['"shell"','"assembly"','"xml"','"Java"']
-  const skills1 = ['"web development"','"android apps"','"WPF applications"','"data structures"']
-  const skills2 = ['"Javascript animation"','"problem sloving"','"and many more to come..."']
+  const languages = ['"C++"','"C"','"C#"','"SQL"','"Kotlin"','"Javascript"','"html"','"css"','"Python"',
+  '"shell"','"assembly"','"xml"','"Java"']
+  const skills = ['"web development"','"android apps"','"WPF applications"','"data structures"',
+  '"Javascript animation"','"problem sloving"','"and many more to come..."']
   const hobbies = ['"programming"','"microscopy"','"rock climbing"','"camping"']
   return (
     <div className='chaseclass'>
@@ -20,13 +20,13 @@ const ChaseClass = () => {
         <li className="in3">gpa = <span className="number">3.97;</span></li>
         <li className="in3">school  = <span className="string">"Mississippi State University";</span></li>
         <li className="in3">languages = [</li>
-        <li className="in4">{languages1.map((word) => (<><span className="string">{word}</span>, </>))}</li>
-        <li className="in4">{languages2.map((word) => (<><span className="string">{word}</span>, </>))}</li>
-        <li className="in3">]</li>
+        <div className="string-list in4">
+        <li className="in4">{languages.map((word) => (<><span className="string">{word}</span>, </>))}]</li>
+        </div>
         <li className="in3">skills = [</li>
-        <li className="in4">{skills1.map((word) => (<><span className="string">{word}</span>, </>))}</li>
-        <li className="in4">{skills2.map((word) => (<><span className="string">{word}</span>, </>))}</li>
-        <li className="in3">]</li>
+        <div className="string-list in4">
+        <li className="in4">{skills.map((word) => (<span className="string">{word}</span>))}]</li>
+        </div>
         <li className="in2">{"}"}</li>
 
         <li className="in2"><span className="typeid">bool</span> workHard(<span className="typeid">int</span> coffeCups);</li>

@@ -8,7 +8,7 @@ interface Props{
 }
 
 const Navbar = ({changePage, page}:Props) => {
-    const pages: string[] = ["About","Projects"];
+    const pages: string[] = ["<About/>","<Projects/>"];
     const subtitles: string[] = [
     "Learn more about me and what I do.",
     "Discover the many projects I've completed."
