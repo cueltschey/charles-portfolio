@@ -20,13 +20,17 @@ const ChaseClass = () => {
         <li className="in3">gpa = <span className="number">3.97;</span></li>
         <li className="in3">school  = <span className="string">"Mississippi State University";</span></li>
         <li className="in3">languages = [</li>
-        <div className="string-list in4">
+        <ul className="string-list in4">
         <li className="in4">{languages.map((word) => (<><span className="string">{word}</span>, </>))}]</li>
-        </div>
+        </ul>
+        <li className="in3"/>
+        <li className="in3"/>
         <li className="in3">skills = [</li>
-        <div className="string-list in4">
+        <ul className="string-list in4">
         <li className="in4">{skills.map((word) => (<span className="string">{word}</span>))}]</li>
-        </div>
+        </ul>
+        <li className="in3"/>
+        <li className="in3"/>
         <li className="in2">{"}"}</li>
 
         <li className="in2"><span className="typeid">bool</span> workHard(<span className="typeid">int</span> coffeCups);</li>

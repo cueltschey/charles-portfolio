@@ -35,7 +35,7 @@ function App() {
       />
     <div className='main'>
       <Navbar page={page} changePage={changePage} />
-      {page === 0? <><Home/> <Contacts/></>: <><Projects/><Skills/></>}
+      {page === 0? <Home/> :page ===1? <Projects/>:page ===2? <Skills/>: <Contacts/>}
     </div></>
         )
 }

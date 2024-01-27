@@ -14,7 +14,6 @@
   transition: background-color 1s; 
   height: min-content;
   height: 30px;
-  vertical-align: middle;
   line-height: 30px;
   display: block;
 }
@@ -24,7 +23,8 @@
 }
 
 .string-list{
-  display: flex-block;
+  display: flex;
+  height: min-content;
 }
 
 .in1{
@@ -43,13 +43,13 @@
 
 
 .classinit{
-  color: turquoise;
+  color: #3088a0;
 }
 .include{
-  color: purple;
+  color: #a03434;
 }
 .string{
-  color: green;
+  color: #50a950;
 }
 .classflag{
   color: red;

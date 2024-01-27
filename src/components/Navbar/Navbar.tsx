@@ -8,10 +8,12 @@ interface Props{
 }
 
 const Navbar = ({changePage, page}:Props) => {
-    const pages: string[] = ["<About/>","<Projects/>"];
+    const pages: string[] = ["<About/>","<Projects/>", "<Skills/>", "<Contact/>"];
     const subtitles: string[] = [
     "Learn more about me and what I do.",
-    "Discover the many projects I've completed."
+    "Discover the many projects I've completed.",
+    "learn more about the skills I've collected.",
+    "Let's connect."
   ]
   
   return (
@@ -23,7 +25,7 @@ const Navbar = ({changePage, page}:Props) => {
                 className={page === index? "navitem active" : "navitem"}
                 onClick={() => changePage(index)}>
                     {text}
-                {page == index? <div id="sub"><TypingEffect text={subtitles[index]} typingSpeed={100}/></div>: <></>}
+                {page === index? <div id="sub"><TypingEffect text={subtitles[index]} typingSpeed={100}/></div>: <></>}
                 </li>
             ))}
         </ul>
