@@ -28,17 +28,18 @@ function App() {
     <>
       <Favicon url={fav}/>
     <AnimatedCursor
-      innerSize={8}
-      outerSize={8}
-      color='200, 200, 100'
+      innerSize={10}
+      outerSize={10}
+      color='100, 255, 255'
       outerAlpha={0.2}
       innerScale={0.7}
-      outerScale={5}
+      outerScale={7}
       clickables={[
         'a',
         'input[type="text"]',
         'button',
-        'li'
+        'li',
+        'span'
       ]}
       />
     <div className='main' style={{fontFamily: "Ubuntu Mono, monospace"}}>

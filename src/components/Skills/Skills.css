@@ -9,16 +9,13 @@
   border-radius: 20px;
   width: auto;
   height: auto;
-  border: 1px solid white;
-  transition: padding 0.5s;
-}
-.data:hover{
-  padding: 10px;
+  margin: 20px;
 }
 .wrapper h1{
   text-align: center;
   margin: 20px;
-  font-size: 25px;
+  font-size: 30px;
+  text-decoration: underline;
 }
 .data ul{
   margin: 20px;
@@ -37,31 +34,29 @@
   background-position: center;
 }
 #javascript{
-  background-image: url('./javascript.png');
+  background-image: url('../../assets/javascript.png');
 }
 #cpp{
-  background-image: url('./c++.png');
+  background-image: url('../../assets/c++.png');
 }
 #python{
-  background-image: url('./python.jpg');
+  background-image: url('../../assets/python.jpg');
 }
 #csharp{
-  background-image: url('./csharp.png');
+  background-image: url('../../assets/C.png');
 }
 #c{
-  background-image: url('./C.png');
+  background-image: url('../../assets/csharp.png');
 }
 #kotlin{
-  background-image: url('./kotlin.jpg');
+  background-image: url('../../assets/kotlin.jpg');
 }
 #typescript{
-  background-image: url('./typescript.png');
+  background-image: url('../../assets/typescript.png');
 }
 #java{
-  background-image: url('./java.png');
-}
-#nasm{
-  background-image: url('./nasm.png');
+  background-image: url('../../assets/java.png');
+  background-color: #343434;
 }
 .data.alg ul{
   display: block;

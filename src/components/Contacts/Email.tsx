@@ -17,15 +17,26 @@ const Email = () => {
   };
 
   return (
+    <div>
+      <h1>Email me here:</h1>
     <form ref={form} onSubmit={sendEmail} className="email">
       <label>Name</label>
-      <input type="text" name="user_name" />
+      <input type="text" name="user_name"/>
       <label>Email</label>
       <input type="email" name="user_email" />
       <label>Message</label>
-      <textarea name="message" />
-      <input type="submit" value="Send" className='emailbut'/>
+      <textarea name="message" style={{
+          height: 400,
+          backgroundColor: '#343434',
+          width: "40vw",
+        }}/>
+      <input type="submit" value="Send" style={{
+          borderRadius: 5,
+          textAlign: "center",
+          height: 40,
+        }}/>
     </form>
+    </div>
   );
 };
 

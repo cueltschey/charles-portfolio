@@ -21,7 +21,6 @@ const Skills = () => {
             <li id="c"></li>
             <li id="kotlin"></li>
             <li id="java"></li>
-            <li id="nasm"></li>
           </ul>
           </div>
         </div>

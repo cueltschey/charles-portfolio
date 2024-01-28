@@ -1,54 +1,35 @@
   .projects-main{
-    display: inline-flex;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 10vw;
-    row-gap: 0px;
+    row-gap: 4vh;
   }
 
   .proj{
-    height: 45vh;
-    width: 40vw;
-    margin-bottom: 50px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px white;
-    background: black;
-  }
-  .proj a {
-    position: absolute;
-    padding: 20px;
+    width: 50vw;
+    height: min-content;
   }
 
   .proj video{
     width: 100%;
-    height: min-content;
-    border-radius: 20px;
-    z-index: 0;
+    border-radius: 5px;
   }
   .desc{
-    opacity: 0 !important;
-    transition: opacity 1s;
     width: 35vw;
     height: min-content;
     z-index: 10;
-    background: rgb(34, 34, 34);
-    border-radius: 10px;
-  }
-  .desc:hover{
-    opacity: 1 !important;
   }
 
 
 
-
-  .desc li::before{
-    font-size: 20px;
-    margin-left: 20px;
+  .desc h1{
+    font-size: calc(20px + 1.5vw);
   }
   .desc li{
-    line-height: 40px;
-    font-size: 20px;
+    line-height: 3vw;
+    font-size: calc(10px + 0.75vw);
     list-style: none;
     transition: letter-spacing 200ms ease;
   }

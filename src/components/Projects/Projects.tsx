@@ -1,10 +1,10 @@
-import autocompleter from "./Autocomplete_Demonstration.mp4";
-import './Projects.css'
-import androidbooksreader from './adroid_booksreader_alpha.mp4'
-import wordchad from './word_chad_demo.mp4'
-import cheron from './cheron_demo.mp4'
-import pong from './pong-clone-demonstration.mp4'
+import autocompleter from "../../assets/Autocomplete_Demonstration.mp4";
+import androidbooksreader from '../../assets/adroid_booksreader_alpha.mp4'
+import wordchad from '../../assets/word_chad_demo.mp4'
+import cheron from '../../assets/cheron_demo.mp4'
+import pong from '../../assets/pong-clone-demonstration.mp4'
 import HoverableDiv from "./HoverDiv";
+import './Projects.css'
 
 const Projects = () => {
   return (
