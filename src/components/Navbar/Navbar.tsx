@@ -21,6 +21,7 @@ const Navbar = ({changePage, page}:Props) => {
         <ul className="navlist">
             {pages.map((text: string, index: number) => (
                 <li 
+            key={index}
                 style={{color: page === index? "white" : "#8ee5ed"}}
                 className={page === index? "navitem active" : "navitem"}
                 onClick={() => changePage(index)}>

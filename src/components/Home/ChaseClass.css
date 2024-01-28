@@ -1,43 +1,45 @@
 .chaseclass{
-  color: red;
-  background-color: #343540;
-  width: min-content;
-  height: min-content;
+  width: 90%;
+  margin: 20px;
 }
 .dummyclass{
   list-style: none;
-  width: 100%;
-  height: 100%;
 }
 .dummyclass li{
   font-size: 25px;
   transition: background-color 1s; 
-  height: min-content;
-  height: 30px;
   line-height: 30px;
-  display: block;
+  height: 30px;
 }
-.dummyclass li:hover{
-  background-color: rgb(200,200,200,0.5);
-  color: black;
+.dummyclass span:hover{
+  color: turquoise !important;
 }
 
 .string-list{
+  margin-left: 200px;
+  text-indent: 0px;
   display: flex;
-  height: min-content;
+  flex-wrap: wrap;
+  font-size: 25px;
+}
+.string-list span{
+  &:after{
+    content: ",";
+    color: white;
+  } 
 }
 
 .in1{
-  text-indent: 100px;
+  text-indent: 50px;
 }
 .in2{
-  text-indent: 150px;
+  text-indent: 100px;
 }
 .in3{
-  text-indent: 200px;
+  text-indent: 150px;
 }
 .in4{
-  text-indent: 250px;
+  text-indent: 200px;
 }
 
 

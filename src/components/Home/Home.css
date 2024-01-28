@@ -1,22 +1,18 @@
  
 .home{
-  height: 100vh;
-  grid-column-start: 1;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
 }
-.home div{
+
+.intro-para{
   line-height: 50px;
   font-size: 20px;
   text-indent: 2em;
-  margin-top: 0px;
-  margin-left: 20px;
-  width: 100%;
-}
-.home img{
-  background-image: url('../../assets/slide-in.svg');
-  height: auto;
-  width: 20vw !important;
-  border-radius: 10px;
-  background-size: cover; 
-  margin: auto;
+  width: 50%;
+  font-size: 20px;
+  margin: 20px;
+  height: 100px;
 }

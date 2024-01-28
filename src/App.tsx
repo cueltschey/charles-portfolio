@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Home from "./components/Home/Home.tsx";
 import Navbar from './components/Navbar/Navbar';
@@ -8,14 +8,22 @@ import Contacts from './components/Contacts/Contacts.tsx';
 import AnimatedCursor from "react-animated-cursor";
 import Favicon from "react-favicon";
 import fav from './assets/favicon.ico'
+import 'typeface-ubuntu-mono'
 
 function App() {
-  document.title = "Charles Ueltschey Portfolio"
+  document.title = "About" 
   const [page, setPage] = useState(0);
   const changePage = (page: number) => {
     setPage(page);
   }
-  if(page == 0) window.scroll(0,0)
+
+  useEffect(() => {
+    const resetScroll = () => {
+      window.scroll(0,0);
+    }
+    resetScroll()
+  }, [])
+
   return (
     <>
       <Favicon url={fav}/>
@@ -33,7 +41,7 @@ function App() {
         'li'
       ]}
       />
-    <div className='main'>
+    <div className='main' style={{fontFamily: "Ubuntu Mono, monospace"}}>
       <Navbar page={page} changePage={changePage} />
       {page === 0? <Home/> :page ===1? <Projects/>:page ===2? <Skills/>: <Contacts/>}
     </div></>
