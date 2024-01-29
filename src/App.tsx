@@ -15,6 +15,7 @@ function App() {
   const [page, setPage] = useState(0);
   const changePage = (page: number) => {
     setPage(page);
+    window.scroll(0,0);
   }
 
   useEffect(() => {

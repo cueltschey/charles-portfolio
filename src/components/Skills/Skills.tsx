@@ -39,7 +39,7 @@ const Skills = () => {
             <li><a href="https://github.com/cueltschey/challenge4">Linked List</a></li>
               <li><a href="https://github.com/cueltschey/hashtable-implementation">Hash Table</a></li>
           </ul>
-            <UserStatisticsComponent username='chaseuelt'/>
+            <UserStatisticsComponent/>
           </div>
       </div>
       <div style={{order:"3"}}>
