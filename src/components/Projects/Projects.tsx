@@ -3,12 +3,29 @@ import androidbooksreader from '../../assets/adroid_booksreader_alpha.mp4'
 import wordchad from '../../assets/word_chad_demo.mp4'
 import cheron from '../../assets/cheron_demo.mp4'
 import pong from '../../assets/pong-clone-demonstration.mp4'
+import gitget from '../../assets/gitget-demo.mp4'
 import HoverableDiv from "./HoverDiv";
 import './Projects.css'
 
 const Projects = () => {
   return (
     <div className="projects-main">
+      <HoverableDiv href="https://github.com/cueltschey/gitget"
+        video={gitget}
+        deployment=""
+        description= {
+          <div className="desc">
+          <h1>GitGet</h1>
+          <li id="lang">Main Language: C</li>
+          <li id="lang">Framework: Debian package</li>
+          <li id="fet">An attempt to make cloning from the cli more intiutive</li>
+          <li id="fet">Uses Ncurses to make a GUI for easy searching and cloning</li>
+          <li id="fet">Creates or Clones any repo the user has access to</li>
+          <li id="err">Requires manual token export</li> 
+        </div>
+      } />
+
+
       <HoverableDiv href="https://github.com/cueltschey/pong-clone"
         video={pong}
         deployment=""
