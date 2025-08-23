@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Force Graph with Detail Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="graph-container" id="graph-container"></div>
+  <div id="detail-panel"><em>Click a node to load details here.</em></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/force-graph"></script>
+  <script>
+    colorList = {}
+    let currentColorIdx = 0;
+    let predefinedColors = [
+      "#ffffff",
+      "#ff00ff",
+      "#ff0000",
+      "#00ffff",
+    ]
+
+
+    function randomColorHex() {
+      //const randomHex = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+      //return randomHex;
+      currentColorIdx += 1;
+      return predefinedColors[currentColorIdx - 1];
+    }
+
+    function nodePaint(node, ctx, index) {
+      if(!colorList[node.type]){
+        newColor = randomColorHex()
+        ctx.fillStyle = newColor
+        colorList[node.type] = newColor
+      } else {
+        ctx.fillStyle = colorList[node.type]
+      }
+
+      // Draw the node based on its type
+      [
+        () => { ctx.fillRect(node.x - 6, node.y - 4, 12, 8); }, // rectangle
+        () => { ctx.beginPath(); ctx.moveTo(node.x, node.y - 5); ctx.lineTo(node.x - 5, node.y + 5); ctx.lineTo(node.x + 5, node.y + 5); ctx.fill(); }, // triangle
+        () => { ctx.beginPath(); ctx.arc(node.x, node.y, 5, 0, 2 * Math.PI, false); ctx.fill(); }, // circle
+        () => { 
+          ctx.beginPath(); ctx.arc(node.x, node.y, 5, 0, 2 * Math.PI, false); ctx.fill();
+          ctx.font = '5px Sans-Serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(node.name, node.x, node.y + 10); 
+        } 
+      ][index]();
+
+      if (node === focusedNode) {
+        ctx.strokeStyle = 'rgba(120, 200, 255, 0.9)';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
+    }
+
+
+    const data = {
+      nodes: [
+        { id: 'home', name: 'About Me', type: 'root' },
+        { id: 'projects', name: 'Personal Projects', type: 'link'},
+        { id: 'contact', name: 'Contact' , type: 'endpoint'}
+      ],
+      links: [
+        { source: 'home', target: 'projects' },
+        { source: 'home', target: 'contact' }
+      ]
+    };
+
+    let focusedNode = data.nodes[0];
+    loadNodeDetails(focusedNode.id);
+
+    function focusOnNode(node, Graph) {
+      Graph.centerAt(node.x, node.y, 1000);
+      focusedNode = node
+    }
+
+
+    function loadNodeDetails(nodePage) {
+      const panel = document.getElementById('detail-panel');
+      panel.innerHTML = `<p>Loading details for <strong>${nodePage}</strong>…</p>`;
+      fetch(`pages/${nodePage}.html`)
+        .then(res => {
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          return res.text();
+        })
+        .then(html => panel.innerHTML = html)
+        .catch(err => {
+          panel.innerHTML = `<p style="color: #e63946;">Error loading content: ${err.message}</p>`;
+        });
+    }
+
+
+    const Graph = ForceGraph()(document.getElementById('graph-container'))
+      .nodeCanvasObject((node, ctx) => nodePaint(node, ctx, 3))
+      .graphData(data)
+      .nodeRelSize(12)
+      .linkColor(link => {
+        if (focusedNode && (link.source === focusedNode || link.target === focusedNode)) {
+          return 'rgba(255,255,255,1)';
+        }
+        return 'rgba(255,255,255,0.4)';
+      })
+      .onNodeClick(node => {
+        loadNodeDetails(node.id);
+        focusOnNode(node, Graph)
+      });
+
+    Graph.d3Force('charge').strength(-500);
+  </script>
+</body>
+</html>
+
