@@ -6,18 +6,54 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <canvas id="bg-canvas"></canvas>
   <div class="graph-container" id="graph-container"></div>
-  <div id="detail-panel"><em>Click a node to load details here.</em></div>
+  <div id="left-panel"></div>
+  <div id="right-panel"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/force-graph"></script>
   <script>
+    const bgCanvas = document.getElementById("bg-canvas");
+    const ctx = bgCanvas.getContext("2d");
+    let stars = [];
+    function resizeCanvas() {
+      bgCanvas.width = window.innerWidth;
+      bgCanvas.height = window.innerHeight;
+      stars = Array.from({length: 200}, () => ({
+        x: Math.random() * bgCanvas.width,
+        y: Math.random() * bgCanvas.height,
+        speed: 0.2 + Math.random() * 1.5,
+        radius: Math.random() * 1.5 + 0.5
+      }));
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    function animateStars() {
+      ctx.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
+      ctx.fillStyle = "white";
+      for (let star of stars) {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
+        ctx.fill();
+        star.x += star.speed * 0.5;
+        star.y += star.speed * 0.2;
+
+        if (star.x > bgCanvas.width) star.x = 0;
+        if (star.y > bgCanvas.height) star.y = 0;
+      }
+      requestAnimationFrame(animateStars);
+    }
+    animateStars();
+
     colorList = {}
     let currentColorIdx = 0;
     let predefinedColors = [
-      "#ffffff",
-      "#ff00ff",
-      "#ff0000",
-      "#00ffff",
+      "#b9375d",
+      "#d25d5d",
+      "#e7d3d3",
+      "#eeeeee",
     ]
 
 
@@ -58,13 +94,15 @@
 
     const data = {
       nodes: [
-        { id: 'home', name: 'About Me', type: 'root' },
-        { id: 'projects', name: 'Personal Projects', type: 'link'},
-        { id: 'contact', name: 'Contact' , type: 'endpoint'}
+        { id: 'home', name: 'About Me', type: '1' },
+        { id: 'projects', name: 'Personal Projects', type: '2'},
+        { id: 'contact', name: 'Contact' , type: '2'},
+        { id: 'resume', name: 'Resume' , type: '2'}
       ],
       links: [
         { source: 'home', target: 'projects' },
-        { source: 'home', target: 'contact' }
+        { source: 'home', target: 'contact' },
+        { source: 'home', target: 'resume' }
       ]
     };
 
@@ -78,9 +116,19 @@
 
 
     function loadNodeDetails(nodePage) {
-      const panel = document.getElementById('detail-panel');
-      panel.innerHTML = `<p>Loading details for <strong>${nodePage}</strong>…</p>`;
-      fetch(`pages/${nodePage}.html`)
+      const leftPanel = document.getElementById('right-panel');
+      fetch(`pages/${nodePage}_right.html`)
+        .then(res => {
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          return res.text();
+        })
+        .then(html => leftPanel.innerHTML = html)
+        .catch(err => {
+          leftPanel.innerHTML = `<p style="color: #e63946;">Error loading content: ${err.message}</p>`;
+        });
+
+      panel = document.getElementById('left-panel');
+      fetch(`pages/${nodePage}_left.html`)
         .then(res => {
           if (!res.ok) throw new Error(`HTTP ${res.status}`);
           return res.text();
