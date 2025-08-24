@@ -49,26 +49,18 @@
 
     colorList = {}
     let currentColorIdx = 0;
-    let predefinedColors = [
-      "#b9375d",
-      "#d25d5d",
-      "#e7d3d3",
-      "#eeeeee",
-    ]
-
+    let predefinedColors = 
 
     function randomColorHex() {
-      //const randomHex = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
-      //return randomHex;
-      currentColorIdx += 1;
-      return predefinedColors[currentColorIdx - 1];
+      const randomHex = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+      return randomHex;
     }
 
     function nodePaint(node, ctx, index) {
       if(!colorList[node.type]){
-        newColor = randomColorHex()
-        ctx.fillStyle = newColor
-        colorList[node.type] = newColor
+        const newColor = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+        ctx.fillStyle = newColor;
+        colorList[node.type] = newColor;
       } else {
         ctx.fillStyle = colorList[node.type]
       }
@@ -80,6 +72,7 @@
         () => { ctx.beginPath(); ctx.arc(node.x, node.y, 5, 0, 2 * Math.PI, false); ctx.fill(); }, // circle
         () => { 
           ctx.beginPath(); ctx.arc(node.x, node.y, 5, 0, 2 * Math.PI, false); ctx.fill();
+          ctx.fillStyle = "#ffffff";
           ctx.font = '5px Sans-Serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText(node.name, node.x, node.y + 10); 
         } 
       ][index]();
@@ -91,18 +84,88 @@
       }
     }
 
-
     const data = {
       nodes: [
-        { id: 'home', name: 'About Me', type: '1' },
-        { id: 'projects', name: 'Personal Projects', type: '2'},
-        { id: 'contact', name: 'Contact' , type: '2'},
-        { id: 'resume', name: 'Resume' , type: '2'}
+        { id: 'home', name: 'About Me', type: 'root' },
+
+        { id: 'work', name: 'Work Experience' , type: 'work'},
+        { id: 'contact', name: 'Contact' , type: 'work'},
+        { id: 'resume', name: 'Resume' , type: 'work'},
+
+        { id: 'projects', name: 'Personal Projects', type: 'link'},
+        { id: 'opengl_boids', name: 'Boids Simulation', type: 'proj'},
+        { id: 'codebase_analyzer', name: 'Codebase Graph', type: 'proj'},
+        { id: 'somepkgmgr', name: 'Debian Package Manager', type: 'proj'},
+        { id: 'ofh_compress', name: 'OFH Compression', type: 'proj'},
+        { id: 'lfs', name: 'Linux From Scratch', type: 'proj'},
+        { id: 'coreutils', name: 'Coreutils Implementation', type: 'proj'},
+        { id: 'kbd_driver', name: 'Linux Keyboard Driver', type: 'proj'},
+        { id: 'tips', name: 'Tips Interpreter', type: 'proj'},
+        { id: 'assembler', name: 'x86_64 Assembler', type: 'proj'},
+        { id: 'flutter_abc', name: 'Flutter ABC renderer', type: 'proj'},
+        { id: 'squared_away', name: 'Squared Away App', type: 'proj'},
+        { id: 'qr_generator', name: 'QR Code Generator', type: 'proj'},
+        { id: 'microbe_net', name: 'Microbe Identifier CNN', type: 'proj'},
+
+        { id: 'skills', name: 'My Skills' , type: 'link'},
+        { id: 'cprogramming', name: 'C/C++' , type: 'skill'},
+        { id: 'python', name: 'Python' , type: 'skill'},
+        { id: 'linux', name: 'Linux' , type: 'skill'},
+        { id: 'flutter', name: 'Flutter/Dart' , type: 'skill'},
+        { id: 'go', name: 'Go' , type: 'skill'},
+        { id: 'javascript', name: 'Javascript/Typescript' , type: 'skill'},
+        { id: 'ai_ml', name: 'AI/ML Development' , type: 'skill'},
+
       ],
       links: [
+        // Home
         { source: 'home', target: 'projects' },
-        { source: 'home', target: 'contact' },
-        { source: 'home', target: 'resume' }
+        { source: 'home', target: 'work' },
+        { source: 'home', target: 'skills' },
+
+        // Work
+        { source: 'work', target: 'contact' },
+        { source: 'work', target: 'resume' },
+
+        // Project
+        { source: 'projects', target: 'opengl_boids' },
+        { source: 'projects', target: 'codebase_analyzer' },
+        { source: 'projects', target: 'somepkgmgr' },
+        { source: 'projects', target: 'ofh_compress' },
+        { source: 'projects', target: 'lfs' },
+        { source: 'projects', target: 'coreutils' },
+        { source: 'projects', target: 'kbd_driver' },
+        { source: 'projects', target: 'tips' },
+        { source: 'projects', target: 'assembler' },
+        { source: 'projects', target: 'flutter_abc' },
+        { source: 'projects', target: 'squared_away' },
+        { source: 'projects', target: 'qr_generator' },
+        { source: 'projects', target: 'microbe_net' },
+
+
+        // Skills
+        { source: 'skills', target: 'cprogramming' },
+        { source: 'skills', target: 'linux' },
+        { source: 'skills', target: 'flutter' },
+        { source: 'skills', target: 'go' },
+        { source: 'skills', target: 'javascript' },
+        { source: 'skills', target: 'ai_ml' },
+        { source: 'skills', target: 'python' },
+
+        // Inter category links
+        { source: 'go', target: 'somepkgmgr' },
+        { source: 'cprogramming', target: 'opengl_boids' },
+        { source: 'cprogramming', target: 'ofh_compress' },
+        { source: 'cprogramming', target: 'coreutils' },
+        { source: 'cprogramming', target: 'kbd_driver' },
+        { source: 'cprogramming', target: 'qr_generator' },
+        { source: 'cprogramming', target: 'tips' },
+        { source: 'flutter', target: 'flutter_abc' },
+        { source: 'flutter', target: 'squared_away' },
+        { source: 'ai_ml', target: 'microbe_net' },
+        { source: 'ai_ml', target: 'ofh_compress' },
+        { source: 'linux', target: 'lfs' },
+        { source: 'javascript', target: 'codebase_analyzer' },
       ]
     };
 
@@ -133,7 +196,7 @@
           if (!res.ok) throw new Error(`HTTP ${res.status}`);
           return res.text();
         })
-        .then(html => panel.innerHTML = html)
+        .then(html => panel.innerHTML = `<div style="height: 10vh;"></div>${html}`)
         .catch(err => {
           panel.innerHTML = `<p style="color: #e63946;">Error loading content: ${err.message}</p>`;
         });
@@ -141,7 +204,7 @@
 
 
     const Graph = ForceGraph()(document.getElementById('graph-container'))
-      .nodeCanvasObject((node, ctx) => nodePaint(node, ctx, 3))
+      .nodeCanvasObject((node, ctx) => nodePaint(node, ctx, node.type == "link"? 1 : 3))
       .graphData(data)
       .nodeRelSize(12)
       .linkColor(link => {
@@ -151,8 +214,10 @@
         return 'rgba(255,255,255,0.4)';
       })
       .onNodeClick(node => {
-        loadNodeDetails(node.id);
-        focusOnNode(node, Graph)
+        if(node.type != "link"){
+          loadNodeDetails(node.id);
+          focusOnNode(node, Graph)
+        }
       });
 
     Graph.d3Force('charge').strength(-500);
