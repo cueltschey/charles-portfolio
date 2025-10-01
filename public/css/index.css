@@ -1,0 +1,124 @@
+:root{
+	--bg: #202020;
+	--fg: #ddd;
+	--accent: #ffffff;
+	--snap-gap: 4px;
+}
+html,body{
+	height:100%;
+	margin:0;
+	background:var(--bg);
+	color:var(--fg);
+	font-family: "Roboto Mono", monospace;
+	font-optical-sizing: auto;
+	font-weight: <weight>;
+	font-style: normal;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	overflow-y:auto;
+	scroll-behavior:smooth;
+	scrollbar-width: thin;
+	scrollbar-color: transparent transparent;
+}
+
+.vt323 {
+  font-family: "VT323", monospace !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+
+
+/* Container uses CSS scroll snap */
+main{
+	height:100%;
+	overflow-y:auto;
+	scroll-snap-type: y mandatory;
+}
+
+/* Each section fills the viewport */
+section{
+	min-height: calc(100vh - var(--snap-gap));
+	height: calc(100vh - var(--snap-gap));
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	scroll-snap-align:start;
+	position:relative;
+	box-sizing:border-box;
+	padding:2rem;
+}
+
+.panel{
+	max-width:900px;
+	text-align:center;
+}
+h1{
+	margin:0 0 .5rem 0;
+	font-size:clamp(1.6rem, 3.5vw, 3rem);
+	color:var(--fg);
+	letter-spacing:0.02em;
+}
+p{
+	margin:0;
+	opacity:0.8;
+}
+.meta{
+	position:fixed;
+	left:12px;
+	bottom:12px;
+	font-size:0.9rem;
+	color:rgba(255,255,255,0.6);
+}
+
+/* Tiny dot nav — optional but handy */
+.dots{
+	position:fixed;
+	right:12px;
+	top:50%;
+	transform:translateY(-50%);
+	display:flex;
+	flex-direction:column;
+	gap:10px;
+	z-index:30;
+}
+.dot{
+	width:10px;
+	height:10px;
+	border-radius:999px;
+	background:rgba(255,255,255,0.08);
+	border:1px solid rgba(255,255,255,0.06);
+	cursor:pointer;
+	transition:transform .18s ease, background .18s ease, opacity .18s ease;
+}
+.dot.active{
+	transform:scale(1.35);
+	background:var(--accent);
+	box-shadow:0 0 8px rgba(42,161,152,0.12);
+	opacity:1;
+}
+
+/* Respect user's reduced motion preference */
+@media (prefers-reduced-motion: reduce){
+	html,body{scroll-behavior:auto;}
+	.dot{transition:none;}
+}
+
+.typewriter {
+  font-family: 'VT323', monospace;
+  font-size: clamp(2rem, 6vw, 5rem);
+  text-align: left;
+  white-space: pre-wrap;
+  overflow: hidden;
+  display: inline-block;
+  line-height: 1.2;
+}
+
+/* blinking cursor animation */
+@keyframes blinkCursor {
+  from { border-color: currentColor; }
+  to   { border-color: transparent; }
+}
+
+.typewriter.blink {
+  animation: blinkCursor 0.7s steps(1) infinite;
+}
