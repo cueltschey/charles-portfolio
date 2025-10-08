@@ -1,0 +1,30 @@
+.typewriter {
+  font-family: 'VT323', monospace;
+  font-size: clamp(2rem, 6vw, 5rem);
+  text-align: left;
+  white-space: pre-wrap;
+  overflow: hidden;
+  display: inline-block;
+  line-height: 1.2;
+	width: 900px;
+}
+
+.subtext {
+  text-align: left;
+  white-space: pre-wrap;
+  overflow: hidden;
+  display: inline-block;
+	width: 900px;
+	margin-left: 50px;
+}
+
+#s1 {
+	height:70vh;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.typewriter.blink {
+  animation: blinkCursor 0.7s steps(1) infinite;
+}

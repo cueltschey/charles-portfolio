@@ -1,4 +1,4 @@
-:root{
+:root{ 
 	--bg: #202020;
 	--fg: #ddd;
 	--accent: #ffffff;
@@ -52,6 +52,7 @@ section{
 	max-width:900px;
 	text-align:center;
 }
+
 h1{
 	margin:0 0 .5rem 0;
 	font-size:clamp(1.6rem, 3.5vw, 3rem);
@@ -70,7 +71,6 @@ p{
 	color:rgba(255,255,255,0.6);
 }
 
-/* Tiny dot nav — optional but handy */
 .dots{
 	position:fixed;
 	right:12px;
@@ -97,28 +97,13 @@ p{
 	opacity:1;
 }
 
-/* Respect user's reduced motion preference */
 @media (prefers-reduced-motion: reduce){
 	html,body{scroll-behavior:auto;}
 	.dot{transition:none;}
 }
 
-.typewriter {
-  font-family: 'VT323', monospace;
-  font-size: clamp(2rem, 6vw, 5rem);
-  text-align: left;
-  white-space: pre-wrap;
-  overflow: hidden;
-  display: inline-block;
-  line-height: 1.2;
-}
 
-/* blinking cursor animation */
 @keyframes blinkCursor {
   from { border-color: currentColor; }
   to   { border-color: transparent; }
-}
-
-.typewriter.blink {
-  animation: blinkCursor 0.7s steps(1) infinite;
 }

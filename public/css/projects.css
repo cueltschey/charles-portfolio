@@ -1,0 +1,34 @@
+#s2 {
+}
+
+.proj-panel {
+	display: flex;
+	flex-direction: row;
+	width: 300px;
+	height: 95%;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.project {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	border: 1px solid white;
+	min-width: 100%;
+	height: 100px;
+}
+
+.proj-bg {
+	width: 100%;
+	height: 100%;
+}
+
+.proj-title {
+	font-size: 15px;
+}
+
+.proj-desc {
+	font-size: 10px;
+}

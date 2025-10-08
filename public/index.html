@@ -1,44 +1,41 @@
-<!doctype html>
-<html lang="en">
-<head>
+<!doctype html> <html lang="en"> <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Dark Fullscreen Sections</title>
+<title>Charles Ueltschey</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/type.css">
+<link rel="stylesheet" href="css/projects.css">
 </head>
 <body>
 <main id="viewport" tabindex="0" aria-label="Full screen sections">
   <section id="s1" aria-label="Section 1">
     <div class="panel">
       <h1 class="typewriter" 
-	  data-text="Charles Ueltschey"
-	  data-speed="50" 
-	  data-cursor="|">
+    data-text="Charles Ueltschey"
+    data-speed="50" 
+    data-cursor="|">
       </h1>
+      <p class="subtext" 
+    data-speed="75" 
+    data-cursor="|">
+      </p>
     </div>
   </section>
 
   <section id="s2" aria-label="Section 2">
-    <div class="panel">
-      <h1>Section Two</h1>
-      <p>Use wheel, keyboard arrows, page up/down or swipe to navigate.</p>
-    </div>
+    <div class="panel proj-panel"></div>
   </section>
 
   <section id="s3" aria-label="Section 3">
     <div class="panel">
-      <h1>Section Three</h1>
-      <p>Thin separator lines between full-screen sections.</p>
     </div>
   </section>
 
   <section id="s4" aria-label="Section 4">
     <div class="panel">
-      <h1>Section Four</h1>
-      <p>That's it — add more sections as you like.</p>
     </div>
   </section>
 </main>
@@ -47,30 +44,23 @@
 <div class="meta">Tip: press ↑ ↓ or use the mousewheel / swipe</div>
 
 <script src="js/scroll.js"></script>
+<script src="js/type.js"></script>
 <script>
-(function() {
-  const el = document.querySelector('.typewriter');
-  if (!el) return;
-
-  const text = el.dataset.text || '';
-  const speed = parseInt(el.dataset.speed, 10) || 100;
-  const cursor = el.dataset.cursor || '|';
-
-  let i = 0;
-
-  function type() {
-    if (i < text.length) {
-      el.textContent = text.substring(0, i + 1) + cursor;
-      i++;
-      setTimeout(type, speed);
-    } else {
-      el.textContent = text; // remove cursor at end
-      el.classList.add('blink'); // add blinking border
-    }
-  }
-
-  el.textContent = '';
-  type();
+(function () {
+	const projects_json = [
+		{ img: "assets/test.png", title: "Test1", desc: "A testing project" },
+		{img: "assets/test.png", title: "Test2", desc: "A testing project"},
+		{img: "assets/test.png", title: "Test3", desc: "A testing project"},
+		{img: "assets/test.png", title: "Test4", desc: "A testing project"},
+	]
+	const projects_pane = document.querySelector(".proj-panel");
+	projects_json.forEach((obj) => {
+		if(!obj.img || !obj.title || !obj.desc) return;
+		const new_project = document.createElement("div")
+		new_project.classList = "project"
+		new_project.innerHTML = `<img src="${obj.img}"  class="proj-bg"></img><h1 class="proj-title">${obj.title}</h1><p class="proj-desc">${obj.desc}</p>`
+		projects_pane.appendChild(new_project)
+	})
 })();
 </script>
 </body>
