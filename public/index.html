@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/type.css">
 <link rel="stylesheet" href="css/projects.css">
+<link rel="stylesheet" href="css/orbit.css">
 </head>
 <body>
 <main id="viewport" tabindex="0" aria-label="Full screen sections">
@@ -23,10 +24,22 @@
     data-cursor="|">
       </p>
     </div>
+		<div class="orbit-ring">
+      <img src="assets/lang/python.svg" alt="Python" class="orbit-icon" style="--i:0;">
+      <img src="assets/lang/javascript.svg" alt="JavaScript" class="orbit-icon" style="--i:1;">
+      <img src="assets/lang/cpp.svg" alt="C++" class="orbit-icon" style="--i:2;">
+      <img src="assets/lang/html5.svg" alt="HTML5" class="orbit-icon" style="--i:3;">
+      <img src="assets/lang/css3.svg" alt="CSS3" class="orbit-icon" style="--i:4;">
+      <img src="assets/lang/java.svg" alt="Java" class="orbit-icon" style="--i:5;">
+      <img src="assets/lang/swift.svg" alt="Swift" class="orbit-icon" style="--i:6;">
+      <img src="assets/lang/rust.svg" alt="Rust" class="orbit-icon" style="--i:7;">
+    </div>
   </section>
 
   <section id="s2" aria-label="Section 2">
-    <div class="panel proj-panel"></div>
+		<div class="panel proj-panel"></div>
+    <div id="prevPage" class="nav-arrow">&#10094;</div>
+    <div id="nextPage" class="nav-arrow">&#10095;</div>
   </section>
 
   <section id="s3" aria-label="Section 3">
@@ -45,23 +58,6 @@
 
 <script src="js/scroll.js"></script>
 <script src="js/type.js"></script>
-<script>
-(function () {
-	const projects_json = [
-		{ img: "assets/test.png", title: "Test1", desc: "A testing project" },
-		{img: "assets/test.png", title: "Test2", desc: "A testing project"},
-		{img: "assets/test.png", title: "Test3", desc: "A testing project"},
-		{img: "assets/test.png", title: "Test4", desc: "A testing project"},
-	]
-	const projects_pane = document.querySelector(".proj-panel");
-	projects_json.forEach((obj) => {
-		if(!obj.img || !obj.title || !obj.desc) return;
-		const new_project = document.createElement("div")
-		new_project.classList = "project"
-		new_project.innerHTML = `<img src="${obj.img}"  class="proj-bg"></img><h1 class="proj-title">${obj.title}</h1><p class="proj-desc">${obj.desc}</p>`
-		projects_pane.appendChild(new_project)
-	})
-})();
-</script>
+<script src="js/projects.js"></script>
 </body>
 </html>

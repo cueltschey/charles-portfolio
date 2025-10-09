@@ -1,0 +1,53 @@
+/* --- ORBIT RING --- */
+.orbit-panel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.orbit-ring {
+  position: absolute;
+  width: 400px;       /* size of the orbit circle */
+  height: 400px;
+  border-radius: 50%;
+  animation: rotateRing 25s linear infinite;
+	right: 200px;
+}
+
+/* Each icon positioned evenly around the ring */
+.orbit-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transform-origin: center center;
+  /* evenly distribute icons: 360deg / 8 icons = 45deg each */
+  transform: rotate(calc(var(--i) * 45deg)) translate(180px) rotate(calc(var(--i) * -45deg));
+  animation: counterRotate 25s linear infinite;
+  filter: drop-shadow(0 0 5px rgba(255,255,255,0.4));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Smooth glowing hover effect */
+.orbit-icon:hover {
+  transform: rotate(calc(var(--i) * 45deg)) translate(180px) scale(1.2) rotate(calc(var(--i) * -45deg));
+  filter: drop-shadow(0 0 20px #fff);
+  z-index: 2;
+}
+
+/* Continuous rotation of the entire ring */
+@keyframes rotateRing {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Counter rotation to keep icons upright */
+@keyframes counterRotate {
+  from { transform: rotate(calc(var(--i) * 45deg)) translate(180px) rotate(calc(var(--i) * -45deg)); }
+  to { transform: rotate(calc(var(--i) * 405deg)) translate(180px) rotate(calc(var(--i) * -405deg)); }
+}
