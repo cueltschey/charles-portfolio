@@ -26,7 +26,6 @@
   object-fit: contain;
   transform-origin: center center;
   /* evenly distribute icons: 360deg / 8 icons = 45deg each */
-  transform: rotate(calc(var(--i) * 45deg)) translate(180px) rotate(calc(var(--i) * -45deg));
   animation: counterRotate 25s linear infinite;
   filter: drop-shadow(0 0 5px rgba(255,255,255,0.4));
   transition: transform 0.3s ease, filter 0.3s ease;
@@ -39,14 +38,16 @@
   z-index: 2;
 }
 
-/* Continuous rotation of the entire ring */
 @keyframes rotateRing {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
-/* Counter rotation to keep icons upright */
 @keyframes counterRotate {
-  from { transform: rotate(calc(var(--i) * 45deg)) translate(180px) rotate(calc(var(--i) * -45deg)); }
-  to { transform: rotate(calc(var(--i) * 405deg)) translate(180px) rotate(calc(var(--i) * -405deg)); }
+  from {
+    transform: rotate(calc(var(--i) * 45deg)) translate(180px) rotate(calc(-1 * var(--i) * 45deg));
+  }
+  to {
+    transform: rotate(calc(var(--i) * 45deg)) translate(180px) rotate(calc(-360deg - var(--i) * 45deg));
+  }
 }
