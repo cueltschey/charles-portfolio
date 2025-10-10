@@ -1,0 +1,108 @@
+.job-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  padding: 1rem;
+	min-width: 90vw;
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+#prevPageJob { left: 2rem; }
+#nextPageJob { right: 2rem; }
+
+.job {
+  position: relative;
+  width: 560px;
+  height: 720px;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  transform: scale(0.9);
+  opacity: 0;
+  animation: popUp 0.5s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255,255,255,0.2);
+}
+
+.job-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+  filter: brightness(0.6);
+  transition: filter 0.3s ease, transform 0.4s ease;
+}
+
+.job:hover .job-bg {
+  filter: brightness(0.3);
+  transform: scale(1.05);
+}
+
+.job-title,
+.job-desc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  color: #fff;
+  font-family: 'VT323', monospace;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.job-desc {
+  opacity: 0;
+  font-size: 1.6rem;
+}
+
+/* On hover — swap visibility */
+.job:hover .job-title {
+  opacity: 0;
+}
+
+.job:hover .job-desc {
+  opacity: 1;
+}
+
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+

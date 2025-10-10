@@ -27,14 +27,14 @@
   transform-origin: center center;
   /* evenly distribute icons: 360deg / 8 icons = 45deg each */
   animation: counterRotate 25s linear infinite;
-  filter: drop-shadow(0 0 5px rgba(255,255,255,0.4));
+  filter: drop-shadow(0 0 1px rgba(255,255,255,0.4));
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 /* Smooth glowing hover effect */
 .orbit-icon:hover {
   transform: rotate(calc(var(--i) * 45deg)) translate(180px) scale(1.2) rotate(calc(var(--i) * -45deg));
-  filter: drop-shadow(0 0 20px #fff);
+  filter: drop-shadow(0 0 5px #fff);
   z-index: 2;
 }
 

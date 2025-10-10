@@ -20,10 +20,12 @@
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
   function updateActive() {
+		document.querySelectorAll(".maze-container").forEach((maze) => { maze.style.display = "none"})
     sections.forEach((s, i) => {
       if (i === current) {
         s.setAttribute('aria-current', 'true');
         dots[i].classList.add('active');
+				s.querySelector(".maze-container").style.display = '';
       } else {
         s.removeAttribute('aria-current');
         dots[i].classList.remove('active');
