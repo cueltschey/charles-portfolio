@@ -1,8 +1,8 @@
 (function () {
   const jobs_json = [
-    { img: "assets/job/ntia.png", title: "RAN Tester UE Project Lead Developer", desc: "For 2 years I have worked to create and maintain an enterprise open source 5G pentesting framework", link: "https://linktr.ee/rantesterue" },
+    { img: "assets/job/rtue.png", title: "RAN Tester UE Project Lead Developer", desc: "For 2 years I have worked to create and maintain an enterprise open source 5G pentesting framework", link: "https://linktr.ee/rantesterue" },
     { img: "assets/job/aerpaw.png", title: "AERPAW Wireless Testbed Developer", desc: "Developed and maintained the AERPAW platform, adding support for 5G OAI and local UAV emulation over the course of 1.5 years", link: "https://aerpaw.org" },
-    { img: "assets/job/freelance.png", title: "Freelance Web & Security Specialist", desc: "I have worked with 30+ small businesses and individuals to create database systems, websites, APIs, AI models etc.", link: "https://hire.cueltschey.com" },
+    { img: "assets/job/freelancing.png", title: "Freelance Web & Security Specialist", desc: "I have worked with 30+ small businesses and individuals to create database systems, websites, APIs, AI models etc.", link: "https://hire.cueltschey.com" },
   ];
 
   const jobsPerPage = 3;
