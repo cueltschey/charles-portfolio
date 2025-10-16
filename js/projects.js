@@ -4,12 +4,10 @@
     { img: "assets/proj/qr-generator.png", title: "C++ QR Code Generator", desc: "CLI app that converts text to QR codes of various sizes", link: "https://github.com/cueltschey/qr-generator" },
     { img: "assets/proj/codebase-graph.png", title: "Graph Codebase Visualizer", desc: "A program to parse and display functions, classes, and files as nodes in a graph", link: "https://github.com/cueltschey/t-ue-analyzer" },
     { img: "assets/proj/squared-away.png", title: "Calendar iOS/Android/Desktop App", desc: "Task management inspired by github contribution squares", link: "https://github.com/cueltschey/squared_away" },
-    { img: "assets/test.png", title: "Test5", desc: "Another experiment with modern web design." },
-    { img: "assets/test.png", title: "Test6", desc: "A simple proof of concept in 3D." },
-    { img: "assets/test.png", title: "Test7", desc: "An AI-assisted image manipulation demo." },
-    { img: "assets/test.png", title: "Test8", desc: "A music visualization interface." },
-    { img: "assets/test.png", title: "Test9", desc: "An AI-assisted image manipulation demo." },
-    { img: "assets/test.png", title: "Test10", desc: "A music visualization interface." },
+    { img: "assets/proj/microbenet.png", title: "Microbe Identification System", desc: "An advanced series of AI models that classify the genus and species of microbes", link: "https://github.com/cueltschey/MicrobeNet" },
+    { img: "assets/proj/gitget.png", title: "Github CLI Manager", desc: "Ncurses TUI application for managing github repos", link: "https://github.com/cueltschey/gitget" },
+    { img: "assets/proj/some-pkgmgr.png", title: "Go based package manager", desc: "A package manager for debian format packages (2x faster than apt)", link: "https://github.com/cueltschey/some-pkgmgr" },
+    { img: "assets/proj/boids.png", title: "OpenGL boids & planets simulator", desc: "A physics simulation of a solar system with flying boids", link: "https://docs.google.com/presentation/d/1DrFNAMv_OXZpIIbzYsZ6iOUGm8Ywn8Ybfqt5EtJfPnU/edit?usp=sharing" },
   ];
 
   const projectsPerPage = 8;

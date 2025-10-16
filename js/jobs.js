@@ -1,15 +1,8 @@
 (function () {
   const jobs_json = [
-    { img: "assets/test.png", title: "Test1", desc: "A testing job about visualization." },
-    { img: "assets/test.png", title: "Test2", desc: "An experiment with interactive graphics." },
-    { img: "assets/test.png", title: "Test3", desc: "A job on data-driven animations." },
-    { img: "assets/test.png", title: "Test4", desc: "A prototype for a minimal UI tool." },
-    { img: "assets/test.png", title: "Test5", desc: "Another experiment with modern web design." },
-    { img: "assets/test.png", title: "Test6", desc: "A simple proof of concept in 3D." },
-    { img: "assets/test.png", title: "Test7", desc: "An AI-assisted image manipulation demo." },
-    { img: "assets/test.png", title: "Test8", desc: "A music visualization interface." },
-    { img: "assets/test.png", title: "Test7", desc: "An AI-assisted image manipulation demo." },
-    { img: "assets/test.png", title: "Test8", desc: "A music visualization interface." },
+    { img: "assets/job/ntia.png", title: "RAN Tester UE Project Lead Developer", desc: "For 2 years I have worked to create and maintain an enterprise open source 5G pentesting framework", link: "https://linktr.ee/rantesterue" },
+    { img: "assets/job/aerpaw.png", title: "AERPAW Wireless Testbed Developer", desc: "Developed and maintained the AERPAW platform, adding support for 5G OAI and local UAV emulation over the course of 1.5 years", link: "https://aerpaw.org" },
+    { img: "assets/job/freelance.png", title: "Freelance Web & Security Specialist", desc: "I have worked with 30+ small businesses and individuals to create database systems, websites, APIs, AI models etc.", link: "https://hire.cueltschey.com" },
   ];
 
   const jobsPerPage = 3;
@@ -35,7 +28,10 @@
         <h1 class="job-title">${obj.title}</h1>
         <p class="job-desc">${obj.desc}</p>
       `;
-      jobs_pane.appendChild(new_job);
+			const link_container = document.createElement('a');
+			link_container.href = obj.link || '';
+			link_container.appendChild(new_job);
+      jobs_pane.appendChild(link_container);
     });
 
     prevBtn.style.display = currentPage === 0 ? "none" : "block";
