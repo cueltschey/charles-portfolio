@@ -29,8 +29,8 @@
 
 .job {
   position: relative;
-  width: 560px;
-  height: 720px;
+  width: 20vw;
+  height: 60vh;
   border-radius: 1rem;
   overflow: hidden;
   background: rgba(255,255,255,0.05);

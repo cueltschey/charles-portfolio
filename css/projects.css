@@ -8,7 +8,7 @@
   overflow: hidden;
   min-height: 80vh;
   padding: 1rem;
-	min-width: 90vw;
+  min-width: 90vw;
 }
 
 .nav-arrow {
@@ -29,8 +29,8 @@
 
 .project {
   position: relative;
-  width: 360px;
-  height: 320px;
+  width: 20vw;
+  height: 30vh;
   border-radius: 1rem;
   overflow: hidden;
   background: rgba(255,255,255,0.05);
