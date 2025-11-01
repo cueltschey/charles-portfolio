@@ -3,6 +3,7 @@
 	--accent: #ffffff;
 	--snap-gap: 4px;
 }
+
 html,body{
 	height:100%;
 	margin:0;
@@ -16,6 +17,7 @@ html,body{
 	scroll-behavior:smooth;
 	scrollbar-width: thin;
 	scrollbar-color: transparent transparent;
+	background-color: #121212;
 }
 
 .vt323 {
